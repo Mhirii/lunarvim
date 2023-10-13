@@ -864,6 +864,12 @@ M.config = function()
           })
       end
     },
+
+
+    {
+      "Exafunction/codeium.vim"
+    },
+
   }
 end
 

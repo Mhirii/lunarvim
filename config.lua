@@ -1,5 +1,4 @@
 
-
 -- Customization
 -- =========================================
 lvim.builtin.sell_your_soul_to_devil = { active = false, prada = false, openai = false } -- if you want microsoft to abuse your soul
@@ -37,31 +36,32 @@ lvim.builtin.metals = {
 }
 lvim.builtin.collaborative_editing = { active = false } -- enable/disable collaborative editing
 lvim.builtin.file_browser = { active = false } -- enable/disable telescope file browser
-lvim.builtin.sniprun = { active = false } -- enable/disable sniprun
+lvim.builtin.sniprun = { active = true } -- enable/disable sniprun
 lvim.builtin.tag_provider = "symbols-outline" -- change this to use different tag providers ( symbols-outline or vista )
 lvim.builtin.global_statusline = false -- set true to use global statusline
-lvim.builtin.dressing = { active = false } -- enable to override vim.ui.input and vim.ui.select with telescope
-lvim.builtin.refactoring = { active = false } -- enable to use refactoring.nvim code_actions
+lvim.builtin.dressing = { active = true } -- enable to override vim.ui.input and vim.ui.select with telescope
+lvim.builtin.refactoring = { active = true } -- enable to use refactoring.nvim code_actions
 lvim.builtin.tmux_lualine = false -- use vim-tpipeline to integrate lualine and tmux
-lvim.builtin.lsp_lines = false -- enable/disable lsp_lines to display lsp virtual text below instead of behind
-lvim.builtin.legendary = { active = false } -- enable/disable legendary plugin ( ctrl-p command )
+lvim.builtin.lsp_lines = true -- enable/disable lsp_lines to display lsp virtual text below instead of behind
+lvim.builtin.legendary = { active =  true} -- enable/disable legendary plugin ( ctrl-p command )
 lvim.builtin.tree_provider = "nvimtree" -- can be "neo-tree" or "nvimtree" or ""
 lvim.builtin.lir.active = false
 lvim.builtin.breadcrumbs.active = false
-lvim.builtin.illuminate.active = false
+lvim.builtin.illuminate.active = true
 lvim.builtin.noice = { active = false } -- enables noice.nvim and inc-rename.nvim
-lvim.builtin.go_programming = { active = false } -- gopher.nvim + nvim-dap-go
-lvim.builtin.python_programming = { active = false } -- swenv.nvim + nvim-dap-python + requirements.txt.vim
+lvim.builtin.go_programming = { active = true } -- gopher.nvim + nvim-dap-go
+lvim.builtin.python_programming = { active = true } -- swenv.nvim + nvim-dap-python + requirements.txt.vim
 lvim.builtin.web_programming = { active = false } -- typescript.nvim + package-info.nvim
-lvim.builtin.rust_programming = { active = false } -- rust_tools.nvim + crates.nvim
-lvim.builtin.cpp_programming = { active = false } -- clangd_extensions.nvim + make-tools.nvim
-lvim.builtin.cmp.cmdline.enable = false
+lvim.builtin.rust_programming = { active = false } -- rust_tools.nvim + crates.nvim 
+lvim.builtin.cpp_programming = { active = false } -- clangd_extensions.nvim + make-tools.nvim 
+lvim.builtin.cmp.cmdline.enable = true
 lvim.builtin.borderless_cmp = false
 lvim.builtin.colored_args = false -- if true then sets up hlargs.nvim
 lvim.builtin.bigfile.active = true
 lvim.builtin.indentlines.mine = false
 -- WARN: mind plugin is deprecated ( use with caution )
 lvim.builtin.mind = { active = false, root_path = "~/.mind" } -- enable/disable mind.nvim
+
 
 
 
