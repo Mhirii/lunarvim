@@ -108,7 +108,7 @@ require("user.autocommands").config()
 
 -- -- Additional Keybindings
 -- -- =========================================
-require("user.mappings").config()
+require("user.keybindings").config()
 
 
 

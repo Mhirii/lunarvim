@@ -849,6 +849,21 @@ M.config = function()
       enabled = lvim.builtin.indentlines.mine,
     },
 
+    {
+      "nanotee/zoxide.vim",
+      dependencies={
+        "junegunn/fzf"
+      }
+    },
+    {
+      "kylechui/nvim-surround",
+      event = "VeryLazy",
+      config = function()
+          require("nvim-surround").setup({
+              -- Configuration here, or leave empty to use defaults
+          })
+      end
+    },
   }
 end
 
