@@ -37,22 +37,22 @@ local mode = function()
   local normal_icons = {
     " 󰊠 ",
     "  ",
-    "  ",
+    " 󰊠 ",
   }
   if mod == "n" or mod == "no" or mod == "nov" then
     return normal_icons[selector]
   elseif mod == "i" or mod == "ic" or mod == "ix" then
     local insert_icons = {
       "  ",
-      "  ",
       "  ",
+      "  ",
     }
     return insert_icons[selector]
   elseif mod == "V" or mod == "v" or mod == "vs" or mod == "Vs" or mod == "cv" then
     local verbose_icons = {
       "  ",
-      "  ",
       "  ",
+      "  ",
     }
     return verbose_icons[selector]
   elseif mod == "c" or mod == "ce" then
@@ -217,9 +217,9 @@ M.config = function()
           function()
             local selector = math.floor(_time.hour / 8) + 1
             local icns = {
-              " 󰊠 ",
-              "  ",
-              "  ",
+            " 󰊠 ",
+            "  ",
+            " 󰊠 ",
             }
             return icns[selector]
           end,

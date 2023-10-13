@@ -75,25 +75,26 @@ M.config = function()
       enabled = lvim.builtin.tag_provider == "symbols-outline",
     },
 
-    -- {
-    --   "tzachar/cmp-tabnine",
-    --   build = "./install.sh",
-    --   dependencies = "hrsh7th/nvim-cmp",
-    --   config = function()
-    --     local tabnine = require "cmp_tabnine.config"
-    --     tabnine:setup {
-    --       max_lines = 1000,
-    --       max_num_results = 10,
-    --       sort = true,
-    --     }
-    --   end,
-    --   lazy = true,
-    --   event = "InsertEnter",
-    --   enabled = lvim.builtin.tabnine.active,
-    -- },
+    {
+      "tzachar/cmp-tabnine",
+      build = "./install.sh",
+      dependencies = "hrsh7th/nvim-cmp",
+      config = function()
+        local tabnine = require "cmp_tabnine.config"
+        tabnine:setup {
+          max_lines = 1000,
+          max_num_results = 10,
+          sort = true,
+        }
+      end,
+      lazy = true,
+      event = "InsertEnter",
+      enabled = lvim.builtin.tabnine.active,
+    },
 
     {
       "folke/twilight.nvim",
+      event = "VeryLazy",
       lazy = true,
       config = function()
         require("user.twilight").config()
@@ -867,7 +868,15 @@ M.config = function()
 
 
     {
-      "Exafunction/codeium.vim"
+      "Exafunction/codeium.nvim",
+      dependencies = {
+        "nvim-lua/plenary.nvim",
+        "hrsh7th/nvim-cmp",
+      },
+      config = function()
+          require("codeium").setup({
+          })
+      end
     },
 
   }

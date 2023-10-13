@@ -42,6 +42,7 @@ M.cmp_kind = {
   Parameter = "",
   StaticMethod = "",
   Macro = "",
+  Codeium = "",
 }
 
 M.icons = {
