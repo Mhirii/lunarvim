@@ -7,7 +7,7 @@ M.config = function()
     return
   end
   hop.setup()
-  require("user.keybindings").set_hop_keymaps()
+  require("user.mappings").set_hop_keymaps()
 end
 
 return M

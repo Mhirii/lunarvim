@@ -75,6 +75,52 @@ lvim.builtin.mind = { active = false, root_path = "~/.mind" } -- enable/disable 
 
 
 
+-- Override Lunarvim defaults
+-- =========================================
+require("user.builtin").config()
+
+-- StatusLine
+-- =========================================
+if lvim.builtin.fancy_statusline.active then
+  require("user.lualine").config()
+end
+
+-- Debugging
+-- =========================================
+if lvim.builtin.dap.active then
+  require("user.dap").config()
+end
+
+-- Language Specific
+-- =========================================
+vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, {
+  "clangd",
+  "dockerls",
+  "gopls",
+  "golangci_lint_ls",
+  "jdtls",
+  "pyright",
+  "rust_analyzer",
+  "taplo",
+  "texlab",
+  "tsserver",
+  "yamlls",
+})
+require("user.null_ls").config()
+
+-- -- Additional Plugins
+-- -- =========================================
+require("user.plugins").config()
+
+-- -- Autocommands
+-- -- =========================================
+require("user.autocommands").config()
+
+-- -- Additional Keybindings
+-- -- =========================================
+require("user.mappings").config()
+
+
 
 
 if vim.g.neovide then
