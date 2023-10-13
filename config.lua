@@ -1,13 +1,3 @@
-lvim.leader = " "
-lvim.colorscheme = "tokyonight" -- set to a custom theme
-lvim.builtin.time_based_themes = true -- set false to use your own configured theme
-lvim.transparent_window = true -- enable/disable transparency
-lvim.debug = true
-vim.lsp.set_log_level "error"
-lvim.log.level = "warn"
-require("user.neovim").config()
-lvim.lsp.code_lens_refresh = true
-lvim.lsp.installer.setup.automatic_installation = false
 
 
 -- Customization
@@ -125,12 +115,12 @@ require("user.mappings").config()
 
 if vim.g.neovide then
     -- Put anything you want to happen only in Neovide here
-  vim.g.neovide_transparency = 0.7
-  vim.o.guifont = "JetbrainsMono Nerd Font:h12"
+  vim.g.neovide_transparency = 0.5
+  vim.o.guifont = "JetbrainsMono Nerd Font:h10"
   vim.g.neovide_theme = 'auto'
   vim.g.neovide_cursor_animate_in_insert_mode = true
   vim.g.neovide_cursor_vfx_mode = "pixiedust"
-  vim.g.neovide_scroll_animation_length = 0.3
+  vim.g.neovide_scroll_animation_length = 0.5
 end
 -- Read the docs: https://www.lunarvim.org/docs/configuration
 -- Example configs: https://github.com/LunarVim/starter.lvim
