@@ -3,7 +3,7 @@
 -- =========================================
 lvim.builtin.sell_your_soul_to_devil = { active = false, prada = false, openai = false } -- if you want microsoft to abuse your soul
 lvim.builtin.lastplace = { active = false } -- change to false if you are jumping to future
-lvim.builtin.tabnine = { active = false } -- change to false if you don't like tabnine
+lvim.builtin.tabnine = { active = true } -- change to false if you don't like tabnine
 lvim.builtin.persistence = { active = true } -- change to false if you don't want persistence
 lvim.builtin.presence = { active = false } -- change to true if you want discord presence
 lvim.builtin.orgmode = { active = false } -- change to true if you want orgmode.nvim
@@ -37,7 +37,7 @@ lvim.builtin.metals = {
 lvim.builtin.collaborative_editing = { active = false } -- enable/disable collaborative editing
 lvim.builtin.file_browser = { active = false } -- enable/disable telescope file browser
 lvim.builtin.sniprun = { active = true } -- enable/disable sniprun
-lvim.builtin.tag_provider = "symbols-outline" -- change this to use different tag providers ( symbols-outline or vista )
+lvim.builtin.tag_provider = "vista" -- change this to use different tag providers ( symbols-outline or vista )
 lvim.builtin.global_statusline = false -- set true to use global statusline
 lvim.builtin.dressing = { active = true } -- enable to override vim.ui.input and vim.ui.select with telescope
 lvim.builtin.refactoring = { active = true } -- enable to use refactoring.nvim code_actions
