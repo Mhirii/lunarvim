@@ -288,6 +288,13 @@ M.config = function()
 	else
 		lvim.builtin.which_key.mappings["/"] = { "<Plug>(comment_toggle_linewise_current)", " Comment" }
 	end
+
+	lvim.builtin.which_key.mappings["i"] = {
+		function()
+			require("nvim-toggler").toggle()
+		end,
+		"Toggle Boolean",
+	}
 	lvim.builtin.which_key.mappings[";"] = { "<cmd>Alpha<CR>", "󰕮 Dashboard" }
 	if lvim.builtin.dap.active then
 		lvim.builtin.which_key.mappings["de"] = { "<cmd>lua require('dapui').eval()<cr>", "Eval" }
@@ -613,5 +620,6 @@ M.set_mind_keymaps = function()
 		},
 	}
 end
+
 
 return M

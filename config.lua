@@ -1,4 +1,3 @@
-
 -- Customization
 -- =========================================
 lvim.builtin.sell_your_soul_to_devil = { active = false, prada = false, openai = false } -- if you want microsoft to abuse your soul
@@ -29,10 +28,10 @@ lvim.builtin.sidebar = { active = false } -- enable/disable sidebar
 lvim.builtin.task_runner = "" -- change this to use different task runners ( "async_tasks" or "overseer" or "")
 lvim.builtin.winbar_provider = "treesitter" -- can be "filename" or "treesitter" or "navic" or ""
 lvim.builtin.metals = {
-  active = false, -- enable/disable nvim-metals for scala development
-  fallbackScalaVersion = "3.2.0-RC3",
-  serverVersion = "1.0.1",
-  bloopVersion = "1.5.11",
+	active = false, -- enable/disable nvim-metals for scala development
+	fallbackScalaVersion = "3.2.0-RC3",
+	serverVersion = "1.0.1",
+	bloopVersion = "1.5.11",
 }
 lvim.builtin.collaborative_editing = { active = false } -- enable/disable collaborative editing
 lvim.builtin.file_browser = { active = false } -- enable/disable telescope file browser
@@ -43,7 +42,7 @@ lvim.builtin.dressing = { active = true } -- enable to override vim.ui.input and
 lvim.builtin.refactoring = { active = true } -- enable to use refactoring.nvim code_actions
 lvim.builtin.tmux_lualine = false -- use vim-tpipeline to integrate lualine and tmux
 lvim.builtin.lsp_lines = true -- enable/disable lsp_lines to display lsp virtual text below instead of behind
-lvim.builtin.legendary = { active =  true} -- enable/disable legendary plugin ( ctrl-p command )
+lvim.builtin.legendary = { active = true } -- enable/disable legendary plugin ( ctrl-p command )
 lvim.builtin.tree_provider = "nvimtree" -- can be "neo-tree" or "nvimtree" or ""
 lvim.builtin.lir.active = false
 lvim.builtin.breadcrumbs.active = false
@@ -52,8 +51,8 @@ lvim.builtin.noice = { active = false } -- enables noice.nvim and inc-rename.nvi
 lvim.builtin.go_programming = { active = true } -- gopher.nvim + nvim-dap-go
 lvim.builtin.python_programming = { active = true } -- swenv.nvim + nvim-dap-python + requirements.txt.vim
 lvim.builtin.web_programming = { active = true } -- typescript.nvim + package-info.nvim
-lvim.builtin.rust_programming = { active = false } -- rust_tools.nvim + crates.nvim 
-lvim.builtin.cpp_programming = { active = true } -- clangd_extensions.nvim + make-tools.nvim 
+lvim.builtin.rust_programming = { active = false } -- rust_tools.nvim + crates.nvim
+lvim.builtin.cpp_programming = { active = true } -- clangd_extensions.nvim + make-tools.nvim
 lvim.builtin.cmp.cmdline.enable = true
 lvim.builtin.borderless_cmp = false
 lvim.builtin.colored_args = false -- if true then sets up hlargs.nvim
@@ -62,9 +61,6 @@ lvim.builtin.indentlines.mine = false
 -- WARN: mind plugin is deprecated ( use with caution )
 lvim.builtin.mind = { active = false, root_path = "~/.mind" } -- enable/disable mind.nvim
 
-
-
-
 -- Override Lunarvim defaults
 -- =========================================
 require("user.builtin").config()
@@ -72,29 +68,29 @@ require("user.builtin").config()
 -- StatusLine
 -- =========================================
 if lvim.builtin.fancy_statusline.active then
-  require("user.lualine").config()
+	require("user.lualine").config()
 end
 
 -- Debugging
 -- =========================================
 if lvim.builtin.dap.active then
-  require("user.dap").config()
+	require("user.dap").config()
 end
 
 -- Language Specific
 -- =========================================
 vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, {
-  "clangd",
-  "dockerls",
-  "gopls",
-  "golangci_lint_ls",
-  "jdtls",
-  "pyright",
-  "rust_analyzer",
-  "taplo",
-  "texlab",
-  "tsserver",
-  "yamlls",
+	"clangd",
+	"dockerls",
+	"gopls",
+	"golangci_lint_ls",
+	"jdtls",
+	"pyright",
+	"rust_analyzer",
+	"taplo",
+	"texlab",
+	"tsserver",
+	"yamlls",
 })
 require("user.null_ls").config()
 
@@ -110,17 +106,21 @@ require("user.autocommands").config()
 -- -- =========================================
 require("user.keybindings").config()
 
-
-
-
 if vim.g.neovide then
-    -- Put anything you want to happen only in Neovide here
-  vim.g.neovide_transparency = 0.5
-  vim.o.guifont = "JetbrainsMono Nerd Font:h10"
-  vim.g.neovide_theme = 'auto'
-  vim.g.neovide_cursor_animate_in_insert_mode = true
-  vim.g.neovide_cursor_vfx_mode = "pixiedust"
-  vim.g.neovide_scroll_animation_length = 0.5
+	-- Put anything you want to happen only in Neovide here
+	vim.g.neovide_confirm_quit = true
+	vim.o.guifont = "JetbrainsMono Nerd Font:h9"
+	vim.g.neovide_profiler = false
+	vim.g.neovide_scale_factor = 1.0
+	vim.g.neovide_theme = "auto"
+	vim.g.neovide_transparency = 0.7
+	vim.g.neovide_cursor_animate_in_insert_mode = true
+	vim.g.neovide_scroll_animation_length = 0.5
+	vim.g.neovide_cursor_animation_length = 0.15
+	vim.g.neovide_cursor_trail_size = 0.7
+	vim.g.neovide_cursor_vfx_mode = "pixiedust"
+  vim.g.neovide_cursor_vfx_particle_lifetime = 2
+  vim.g.neovide_cursor_vfx_particle_density = 14
 end
 -- Read the docs: https://www.lunarvim.org/docs/configuration
 -- Example configs: https://github.com/LunarVim/starter.lvim
