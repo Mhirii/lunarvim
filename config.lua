@@ -1,5 +1,8 @@
 -- Customization
 -- =========================================
+vim.opt.relativenumber = true
+vim.opt.wrap = true
+vim.wo.fillchars='eob: '
 lvim.builtin.sell_your_soul_to_devil = { active = false, prada = false, openai = false } -- if you want microsoft to abuse your soul
 lvim.builtin.lastplace = { active = false } -- change to false if you are jumping to future
 lvim.builtin.tabnine = { active = true } -- change to false if you don't like tabnine
