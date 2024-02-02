@@ -31,3 +31,19 @@ normal["K"] = { ":lua require('user.utils').show_doc()<CR>", "󱓷 Show Document
 
 -- live grep
 normal["<leader>/"] = { "<cmd>Telescope live_grep<cr>", "󱩾 Grep" }
+
+normal["<A-h>"] = { require("smart-splits").resize_left, "Resize left" }
+normal["<A-j>"] = { require("smart-splits").resize_down, "Resize down" }
+normal["<A-k>"] = { require("smart-splits").resize_up, "Resize up" }
+normal["<A-l>"] = { require("smart-splits").resize_right, "Resize right" }
+
+-- moving between splits
+normal["<C-h>"] = { require("smart-splits").move_cursor_left, "Move cursor left" }
+normal["<C-j>"] = { require("smart-splits").move_cursor_down, "Move cursor down" }
+normal["<C-k>"] = { require("smart-splits").move_cursor_up, "Move cursor up" }
+normal["<C-l>"] = { require("smart-splits").move_cursor_right, "Move cursor right" }
+-- swapping buffers between windows
+normal["<leader><leader>h"] = { require("smart-splits").swap_buf_left, "Swap buffer left" }
+normal["<leader><leader>j"] = { require("smart-splits").swap_buf_down, "Swap buffer down" }
+normal["<leader><leader>k"] = { require("smart-splits").swap_buf_up, "Swap buffer up" }
+normal["<leader><leader>l"] = { require("smart-splits").swap_buf_right, "Swap buffer right" }

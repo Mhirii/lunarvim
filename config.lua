@@ -39,8 +39,6 @@ reload("user.whichkey")
 --
 -- TODO: Aerial
 -- TODO: Harpoon
--- TODO: inlayhints
--- TODO: tmux
 -- TODO: custom lualine
 -- TODO: Override tree
 -- TODO: Override telescope

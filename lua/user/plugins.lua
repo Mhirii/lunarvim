@@ -232,4 +232,11 @@ lvim.plugins = {
 			reload("user.configs.inlayhints")
 		end,
 	},
+
+	{
+		"mrjones2014/smart-splits.nvim",
+		config = function()
+			reload("user.configs.smartsplits")
+		end,
+	},
 }
