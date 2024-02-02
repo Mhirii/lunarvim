@@ -176,6 +176,20 @@ lvim.plugins = {
 			require("noice").setup(opts)
 		end,
 	},
+
+	{
+		"rose-pine/neovim",
+		name = "rose-pine",
+		config = function()
+			reload("rose-pine").setup({
+				variant = "main",
+				styles = {
+					italic = false,
+					transparency = lvim.transparent_window,
+				},
+			})
+		end,
+	},
 }
 
 reload("lua.user.configs.init")

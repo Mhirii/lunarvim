@@ -31,10 +31,6 @@ reload("user.settings")
 -- =========================================
 reload("user.plugins")
 
--- Autocommands
--- =========================================
--- require("user.autocommands").config()
-
 -- Additional Keybindings
 -- =========================================
 reload("user.keys")
