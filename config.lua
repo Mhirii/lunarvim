@@ -1,11 +1,7 @@
+-- #abcdef
 -- Customization
 -- =========================================
-lvim.leader = " "
--- lvim.colorscheme = "tokyonight" -- set to a custom theme
-lvim.transparent_window = true
--- lvim.lsp.code_lens_refresh = true
--- lvim.lsp.installer.setup.automatic_installation = true
-reload ("user.options")
+reload "user.options"
 
 -- Override Lunarvim defaults
 -- =========================================
@@ -30,7 +26,7 @@ reload ("user.options")
 
 -- Additional Plugins
 -- =========================================
--- require("user.plugins").config()
+reload "user.plugins"
 
 -- Autocommands
 -- =========================================
@@ -41,18 +37,23 @@ reload ("user.options")
 -- require("user.keybinds").config()
 
 --
--- TODO: Bookmarks
+-- TODO: Aerial
 -- TODO: bqf
 -- TODO: cmp
--- TODO: colorizer
+-- TODO: conform
 -- TODO: lazygit
 -- TODO: Harpoon
 -- TODO: icons
 -- TODO: inlayhints
+-- TODO: marks
 -- TODO: neoscroll
 -- TODO: numb
 -- TODO: noice
+-- TODO: notify
+-- TODO: persist
 -- TODO: surround
+-- TODO: trouble
+-- TODO: tmux
 -- TODO: codeium
 -- TODO: custom lualine 
 -- TODO: Override binds

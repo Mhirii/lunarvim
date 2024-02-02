@@ -1,5 +1,8 @@
 -- opt.titlestring = "%<%F%=%l/%L - nvim" -- what the title of the window will be set to
 local undodir = join_paths(get_cache_dir(), "undo")
+lvim.leader = " "
+lvim.transparent_window = true
+lvim.lsp.installer.setup.automatic_installation = true
 vim.opt.backup = false              -- creates a backup file
 vim.opt.clipboard = "unnamedplus"   -- allows neovim to access the system clipboard
 vim.opt.cmdheight = 1               -- more space in the neovim command line for displaying messages
@@ -11,7 +14,6 @@ vim.opt.fileencoding = "utf-8"      -- the encoding written to a file
 vim.opt.foldexpr = ""               -- set to "nvim_treesitter#foldexpr()" for treesitter based folding
 vim.opt.foldmethod = "manual"       -- folding, set to "expr" for treesitter based folding
 vim.opt.guifont = "MonaspiceNe"
-vim.opt.guifont = "monospace:h17"   -- the font used in graphical neovim applications
 vim.opt.hidden = true               -- required to keep multiple buffers and open multiple buffers
 vim.opt.hlsearch = true             -- highlight all matches on previous search pattern
 vim.opt.ignorecase = true           -- ignore case in search patterns
