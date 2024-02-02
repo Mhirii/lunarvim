@@ -1,3 +1,4 @@
+local settings = reload("lua.user.settings")
 lvim.plugins = {
 	{
 		"crusj/bookmarks.nvim",
@@ -19,5 +20,14 @@ lvim.plugins = {
 		event = "BufReadPre",
 		enabled = settings.persist,
 	},
+	{
+		"max397574/better-escape.nvim",
+		event = "InsertEnter",
+		enabled = settings.escape,
+		config = function()
+			reload("better_escape").setup()
+		end,
+	},
+}
 
 reload("lua.user.configs.init")
