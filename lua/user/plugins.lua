@@ -217,6 +217,13 @@ lvim.plugins = {
 		end,
 	},
 	{
+		"folke/todo-comments.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		config = function()
+			reload("user.configs.todo")
+		end,
+	},
+	{
 		"norcalli/nvim-colorizer.lua",
 		config = function()
 			reload("colorizer").setup()

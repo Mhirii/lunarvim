@@ -1,13 +1,8 @@
--- #abcdef
 -- Customization
 -- =========================================
 reload("user.options")
 reload("user.icons")
 reload("user.utils")
-
--- Override Lunarvim defaults
--- =========================================
--- require("user.builtin").config()
 
 -- Language Specific
 -- =========================================
@@ -26,17 +21,20 @@ reload("user.utils")
 -- })
 -- require("user.null_ls").config()
 
--- Additional Plugins
+-- Plugins
 -- =========================================
 reload("user.plugins")
 
--- Additional Keybindings
+-- Keybindings
 -- =========================================
 reload("user.keys")
 reload("user.whichkey")
 
 --
+-- TODO: Setup ts lsp
+-- TODO: Setup vue lsp
+-- TODO: Setup go lsp
+-- TODO: Setup rust lsp
 -- TODO: Aerial
 -- TODO: custom lualine
 -- TODO: Override telescope
--- TODO: Override todo comments

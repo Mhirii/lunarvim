@@ -97,7 +97,7 @@ lvim.builtin.which_key.mappings["s"] = {
 	C = { "<cmd>Telescope commands<cr>", "󱆃 Commands" },
 	b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
 	c = { "<cmd>Telescope colorscheme<cr>", "󱥚 Colorscheme" },
-	d = { "<CMD>Telescope zoxide list<CR>", "󰉕 Zoxide" },
+	d = { "<CMD>TodoTelescope<CR>", "󱞀 Todo Comment (Telescope)" },
 	f = { "<cmd>Telescope find_files<cr>", "󰮗 Find File" },
 	H = { "<cmd>Telescope highlights<cr>", "󰸱 Find highlight groups" },
 	h = { "<cmd>Telescope help_tags<cr>", "󰋖 Find Help" },
@@ -111,10 +111,12 @@ lvim.builtin.which_key.mappings["s"] = {
 	R = { "<cmd>Telescope registers<cr>", "󱘟 Registers" },
 	r = { "<cmd>Telescope oldfiles<cr>", "󱋢 Open Recent File" },
 	t = { "<cmd>Telescope live_grep<cr>", "󱩾 Text" },
+	x = { "<CMD>Telescope zoxide list<CR>", "󰉕 Zoxide" },
 }
 
 lvim.builtin.which_key.mappings["t"] = {
 	name = "Toggle",
+	d = { "<cmd>TodoTrouble<cr>", "󱞀 Todo Comment (Trouble)" },
 	f = { ':lua require("trouble").toggle("quickfix")<CR>', "󰌵 Toggle QuickFix (Trouble)" },
 	l = { ":LspLensToggle<CR>", "󰙎 Toggle Lens" },
 	o = { ":lua require('oil').toggle_float()<CR>", "󰉕 Toggle Oil" },
