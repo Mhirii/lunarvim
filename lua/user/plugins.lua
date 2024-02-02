@@ -5,7 +5,7 @@ lvim.plugins = {
 		dependencies = { "nvim-web-devicons" },
 		enabled = settings.bookmarks,
 		config = function()
-			reload("lua.user.configs.bookmarks")
+			reload("user.configs.bookmarks")
 		end,
 	},
 
@@ -18,7 +18,7 @@ lvim.plugins = {
 		"stevearc/conform.nvim",
 		enabled = settings.conform,
 		config = function()
-			reload("lua.user.configs.conform")
+			reload("user.configs.conform")
 		end,
 	},
 
@@ -28,7 +28,7 @@ lvim.plugins = {
 		"folke/persistence.nvim",
 		event = "BufReadPre",
 		config = function()
-			reload("lua.user.configs.persist")
+			reload("user.configs.persist")
 		end,
 		enabled = settings.persist,
 	},
@@ -46,7 +46,7 @@ lvim.plugins = {
 		"dnlhc/glance.nvim",
 		event = "BufRead",
 		config = function()
-			reload("lua.user.configs.glance")
+			reload("user.configs.glance")
 		end,
 		enabled = settings.glance,
 	},
@@ -55,7 +55,7 @@ lvim.plugins = {
 		"karb94/neoscroll.nvim",
 		enabled = settings.neoscroll,
 		config = function()
-			reload("lua.user.configs.neoscroll")
+			reload("user.configs.neoscroll")
 		end,
 	},
 
@@ -90,7 +90,7 @@ lvim.plugins = {
 		enabled = settings.marks,
 		config = function(_, opts)
 			-- require("marks").setup(opts)
-			reload("lua.user.configs.marks")
+			reload("user.configs.marks")
 		end,
 	},
 
@@ -98,7 +98,7 @@ lvim.plugins = {
 		"VidocqH/lsp-lens.nvim",
 		enabled = settings.lsplens,
 		config = function()
-			reload("lua.user.configs.lsplens")
+			reload("user.configs.lsplens")
 		end,
 	},
 
@@ -121,7 +121,7 @@ lvim.plugins = {
 		},
 		config = function()
 			-- require("oil").setup()
-			reload("lua.user.configs.oil")
+			reload("user.configs.oil")
 		end,
 	},
 
@@ -163,7 +163,7 @@ lvim.plugins = {
 		event = "VeryLazy",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
-			reload("lua.user.configs.trouble")
+			reload("user.configs.trouble")
 		end,
 		enabled = settings.trouble,
 	},
@@ -174,7 +174,7 @@ lvim.plugins = {
 		enabled = settings.dressing,
 		config = function(_, opts)
 			-- require("dressing").setup(opts)
-			reload("lua.user.configs.dressing")
+			reload("user.configs.dressing")
 		end,
 	},
 
@@ -183,7 +183,7 @@ lvim.plugins = {
 		event = "VeryLazy",
 		enabled = settings.fidget,
 		config = function()
-			local opts = require("lua.user.configs.fidget")
+			local opts = require("user.configs.fidget")
 			require("fidget").setup(opts)
 		end,
 	},
@@ -196,7 +196,7 @@ lvim.plugins = {
 		},
 		enabled = settings.noice,
 		config = function()
-			local opts = require("lua.user.configs.noice")
+			local opts = require("user.configs.noice")
 			require("noice").setup(opts)
 		end,
 	},
@@ -233,4 +233,3 @@ lvim.plugins = {
 		end,
 	},
 }
-
