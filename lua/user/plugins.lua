@@ -33,6 +33,11 @@ lvim.plugins = {
 		event = "BufRead",
 		enabled = settings.glance,
 	},
+	{
+		"karb94/neoscroll.nvim",
+		event = "BufRead",
+		enabled = settings.neoscroll,
+	},
 }
 
 reload("lua.user.configs.init")

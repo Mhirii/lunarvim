@@ -19,3 +19,7 @@ end
 if settings.glance then
 	reload("lua.user.configs.glance")
 end
+
+if settings.neoscroll then
+	reload("lua.user.configs.neoscroll")
+end
