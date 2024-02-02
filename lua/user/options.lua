@@ -1,6 +1,5 @@
 -- opt.titlestring = "%<%F%=%l/%L - nvim" -- what the title of the window will be set to
 local undodir = join_paths(get_cache_dir(), "undo")
-lvim.leader = " "
 lvim.transparent_window = true
 lvim.lsp.installer.setup.automatic_installation = true
 vim.opt.backup = false              -- creates a backup file
