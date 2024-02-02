@@ -36,4 +36,13 @@ M.lsplens = true
 -- edit your fs like you edit your buffers
 M.oil = true
 
+-- AI
+M.codeium = true
+
+-- good ui
+M.trouble = true
+
+-- ui improvement
+M.dressing = true
+
 return M

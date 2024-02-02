@@ -81,6 +81,10 @@ lvim.plugins = {
 		event = "VeryLazy",
 		enabled = settings.oil,
 		dependencies = { "nvim-tree/nvim-web-devicons" },
+		keys = {
+			{ mode = "n", "<leader>to", ':lua require("oil").toggle_float()<CR>', desc = "󰉕 Toggle Oil" },
+			{ mode = { "n", "x" }, "<C-o>", ':lua require("oil").toggle_float()<CR>', desc = "󰉕 Toggle Oil" },
+		},
 		config = function()
 			require("oil").setup()
 		end,
@@ -99,6 +103,40 @@ lvim.plugins = {
 				desc = "󰨙 Toggle",
 			},
 		},
+	},
+
+	{
+		"Exafunction/codeium.nvim",
+		enabled = settings.codeium,
+		keys = {
+			{ mode = "n", "<leader>tc", ":lua require('codeium').setup()<CR>", desc = "󱚤 Enable Codeium" },
+		},
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"hrsh7th/nvim-cmp",
+		},
+		config = function()
+			require("codeium").setup()
+			local cmp_source = { name = "codeium" }
+			table.insert(lvim.builtin.cmp.sources, 1, cmp_source)
+			table.insert(lvim.builtin.cmp.formatting.source_names, { codeium = "Codeium" })
+		end,
+	},
+
+	{
+		"folke/trouble.nvim",
+		event = "VeryLazy",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		enabled = settings.trouble,
+	},
+
+	{
+		"stevearc/dressing.nvim",
+		lazy = false,
+		enabled = settings.dressing,
+		config = function(_, opts)
+			require("dressing").setup(opts)
+		end,
 	},
 }
 

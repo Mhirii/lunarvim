@@ -2,6 +2,7 @@
 -- Customization
 -- =========================================
 reload("user.options")
+reload("user.icons")
 reload("user.utils")
 reload("user.settings")
 

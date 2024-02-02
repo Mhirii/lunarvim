@@ -35,3 +35,11 @@ end
 if settings.oil then
 	reload("lua.user.configs.oil")
 end
+
+if settings.trouble then
+	reload("lua.user.configs.trouble")
+end
+
+if settings.dressing then
+	reload("lua.user.configs.dressing")
+end

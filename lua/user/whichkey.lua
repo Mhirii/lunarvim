@@ -109,4 +109,6 @@ lvim.builtin.which_key.mappings["t"] = {
 	name = "Toggle",
 	o = { "<cmd>Oil<CR>", "󰉕 Toggle Oil" },
 	l = { ":LspLensToggle<CR>", "󰙎 Toggle Lens" },
+	r = { ':lua require("trouble").toggle()<CR>', "󱂩 Toggle Trouble" },
+	f = { ':lua require("trouble").toggle("quickfix")<CR>', "󰌵 Toggle QuickFix (Trouble)" },
 }
