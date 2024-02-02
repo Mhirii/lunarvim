@@ -11,3 +11,7 @@ end
 if settings.conform then
 	reload("lua.user.configs.conform")
 end
+
+if settings.persist then
+	reload("lua.user.configs.persist")
+end

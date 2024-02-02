@@ -8,4 +8,7 @@ M.colorizer = true
 -- Formatter
 M.conform = true
 
+-- Load last session
+M.persist = true
+
 return M

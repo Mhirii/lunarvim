@@ -14,5 +14,10 @@ lvim.plugins = {
 	},
 
 	{ "jose-elias-alvarez/null-ls.nvim", enabled = false },
+	{
+		"folke/persistence.nvim",
+		event = "BufReadPre",
+		enabled = settings.persist,
+	},
 
 reload("lua.user.configs.init")
