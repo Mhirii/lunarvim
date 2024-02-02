@@ -24,6 +24,10 @@ if settings.neoscroll then
 	reload("lua.user.configs.neoscroll")
 end
 
+if settings.marks then
+	reload("lua.user.configs.marks")
+end
+
 if settings.lsplens then
 	reload("lua.user.configs.lsplens")
 end

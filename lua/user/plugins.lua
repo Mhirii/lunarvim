@@ -46,6 +46,14 @@ lvim.plugins = {
 		end,
 	},
 	{
+		"chentoast/marks.nvim",
+		event = "BufRead",
+		enabled = settings.marks,
+		config = function(_, opts)
+			require("marks").setup(opts)
+		end,
+	},
+	{
 		"VidocqH/lsp-lens.nvim",
 		enabled = settings.lsplens,
 	},

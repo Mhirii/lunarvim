@@ -46,7 +46,6 @@ reload("user.whichkey")
 -- TODO: Harpoon
 -- TODO: icons
 -- TODO: inlayhints
--- TODO: marks
 -- TODO: numb
 -- TODO: noice
 -- TODO: notify
