@@ -36,7 +36,7 @@ reload("user.plugins")
 -- Additional Keybindings
 -- =========================================
 reload("user.keys")
--- require("user.keybinds").config()
+reload("user.whichkey")
 
 --
 -- TODO: Aerial
