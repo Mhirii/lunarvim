@@ -7,10 +7,6 @@ lvim.plugins = {
 		end,
 	},
 
-	{ -- FIXME: Change
-		"NvChad/nvim-colorizer.lua",
-	},
-
 	{
 		"stevearc/conform.nvim",
 		config = function()
@@ -218,6 +214,12 @@ lvim.plugins = {
 		"mrjones2014/smart-splits.nvim",
 		config = function()
 			reload("user.configs.smartsplits")
+		end,
+	},
+	{
+		"norcalli/nvim-colorizer.lua",
+		config = function()
+			reload("colorizer").setup()
 		end,
 	},
 }
