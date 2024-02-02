@@ -1,4 +1,5 @@
 -- Customization
+--
 -- =========================================
 reload("user.options")
 reload("user.icons")
@@ -24,6 +25,10 @@ reload("user.utils")
 -- Plugins
 -- =========================================
 reload("user.plugins")
+
+-- Overrides
+-- =========================================
+reload("user.overrides")
 
 -- Keybindings
 -- =========================================
