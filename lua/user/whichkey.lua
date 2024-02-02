@@ -60,6 +60,22 @@ lvim.builtin.which_key.mappings["g"] = {
 	u = { "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", "Undo Stage Hunk" },
 }
 
+lvim.builtin.which_key.mappings["m"] = {
+	name = "Mark",
+	b = {
+		function()
+			require("bookmarks").add_bookmarks()
+		end,
+		"󰃄 Add Bookmark",
+	},
+	t = {
+		function()
+			require("bookmarks").toggle_bookmarks()
+		end,
+		"󰧏 Toggle Bookmarks",
+	},
+}
+
 lvim.builtin.which_key.mappings["p"] = {
 	name = "Preview",
 	D = { ":Glance type_definitions<CR>", " Preview type_definitions" },

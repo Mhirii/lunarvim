@@ -1,5 +1,5 @@
 lvim.plugins = {
-	{ -- TODO: binds
+	{
 		"crusj/bookmarks.nvim",
 		dependencies = { "nvim-web-devicons" },
 		config = function()
