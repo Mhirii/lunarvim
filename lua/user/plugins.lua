@@ -1,9 +1,7 @@
-local settings = reload("lua.user.settings")
 lvim.plugins = {
 	{ -- TODO: binds
 		"crusj/bookmarks.nvim",
 		dependencies = { "nvim-web-devicons" },
-		enabled = settings.bookmarks,
 		config = function()
 			reload("user.configs.bookmarks")
 		end,
@@ -11,12 +9,10 @@ lvim.plugins = {
 
 	{ -- FIXME: Change
 		"NvChad/nvim-colorizer.lua",
-		enabled = settings.colorizer,
 	},
 
 	{
 		"stevearc/conform.nvim",
-		enabled = settings.conform,
 		config = function()
 			reload("user.configs.conform")
 		end,
@@ -30,13 +26,11 @@ lvim.plugins = {
 		config = function()
 			reload("user.configs.persist")
 		end,
-		enabled = settings.persist,
 	},
 
 	{
 		"max397574/better-escape.nvim",
 		event = "InsertEnter",
-		enabled = settings.escape,
 		config = function()
 			reload("better_escape").setup()
 		end,
@@ -48,12 +42,10 @@ lvim.plugins = {
 		config = function()
 			reload("user.configs.glance")
 		end,
-		enabled = settings.glance,
 	},
 
 	{
 		"karb94/neoscroll.nvim",
-		enabled = settings.neoscroll,
 		config = function()
 			reload("user.configs.neoscroll")
 		end,
@@ -63,7 +55,6 @@ lvim.plugins = {
 		"echasnovski/mini.surround",
 		version = "*",
 		event = "VeryLazy",
-		enabled = settings.surround,
 		config = function()
 			require("mini.surround").setup()
 		end,
@@ -73,7 +64,6 @@ lvim.plugins = {
 		"echasnovski/mini.indentscope",
 		version = "false",
 		event = "BufRead",
-		enabled = settings.indentscope,
 		config = function()
 			require("mini.indentscope").setup({
 				draw = {
@@ -87,7 +77,6 @@ lvim.plugins = {
 	{
 		"chentoast/marks.nvim",
 		event = "BufRead",
-		enabled = settings.marks,
 		config = function(_, opts)
 			-- require("marks").setup(opts)
 			reload("user.configs.marks")
@@ -96,7 +85,6 @@ lvim.plugins = {
 
 	{
 		"VidocqH/lsp-lens.nvim",
-		enabled = settings.lsplens,
 		config = function()
 			reload("user.configs.lsplens")
 		end,
@@ -113,7 +101,6 @@ lvim.plugins = {
 	{
 		"stevearc/oil.nvim",
 		event = "VeryLazy",
-		enabled = settings.oil,
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		keys = {
 			{ mode = "n", "<leader>to", ':lua require("oil").toggle_float()<CR>', desc = "󰉕 Toggle Oil" },
@@ -142,7 +129,6 @@ lvim.plugins = {
 
 	{
 		"Exafunction/codeium.nvim",
-		enabled = settings.codeium,
 		keys = {
 			{ mode = "n", "<leader>tc", ":lua require('codeium').setup()<CR>", desc = "󱚤 Enable Codeium" },
 		},
@@ -165,13 +151,11 @@ lvim.plugins = {
 		config = function()
 			reload("user.configs.trouble")
 		end,
-		enabled = settings.trouble,
 	},
 
 	{
 		"stevearc/dressing.nvim",
 		lazy = false,
-		enabled = settings.dressing,
 		config = function(_, opts)
 			-- require("dressing").setup(opts)
 			reload("user.configs.dressing")
@@ -181,7 +165,6 @@ lvim.plugins = {
 	{
 		"j-hui/fidget.nvim",
 		event = "VeryLazy",
-		enabled = settings.fidget,
 		config = function()
 			local opts = require("user.configs.fidget")
 			require("fidget").setup(opts)
@@ -194,7 +177,6 @@ lvim.plugins = {
 		dependencies = {
 			"MunifTanjim/nui.nvim",
 		},
-		enabled = settings.noice,
 		config = function()
 			local opts = require("user.configs.noice")
 			require("noice").setup(opts)
@@ -227,7 +209,6 @@ lvim.plugins = {
 
 	{
 		"lvimuser/lsp-inlayhints.nvim",
-		enabled = settings.inlayhints,
 		config = function()
 			reload("user.configs.inlayhints")
 		end,

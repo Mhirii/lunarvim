@@ -1,6 +1,11 @@
 -- opt.titlestring = "%<%F%=%l/%L - nvim" -- what the title of the window will be set to
 local undodir = join_paths(get_cache_dir(), "undo")
 -- lvim.colorscheme = "rose-pine-main"
+--
+lvim.builtin.indentlines.active = false
+lvim.builtin.project.active = false
+lvim.builtin.treesitter.auto_install = true
+
 lvim.transparent_window = true
 lvim.lsp.installer.setup.automatic_installation = true
 lvim.format_on_save.enabled = false
