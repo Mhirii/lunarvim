@@ -190,6 +190,16 @@ lvim.plugins = {
 			})
 		end,
 	},
+
+	{
+		"jvgrootveld/telescope-zoxide",
+		config = function()
+			require("telescope").load_extension("zoxide")
+		end,
+		keys = {
+			{ "<leader>sx", "<CMD>Telescope zoxide list<CR>" },
+		},
+	},
 }
 
 reload("lua.user.configs.init")

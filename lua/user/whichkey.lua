@@ -89,6 +89,7 @@ lvim.builtin.which_key.mappings["s"] = {
 	name = "Search",
 	b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
 	c = { "<cmd>Telescope colorscheme<cr>", "󱥚 Colorscheme" },
+	d = { "<CMD>Telescope zoxide list<CR>", "󰉕 Zoxide" },
 	f = { "<cmd>Telescope find_files<cr>", "󰮗 Find File" },
 	h = { "<cmd>Telescope help_tags<cr>", "󰋖 Find Help" },
 	H = { "<cmd>Telescope highlights<cr>", "󰸱 Find highlight groups" },
