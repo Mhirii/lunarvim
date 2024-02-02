@@ -149,6 +149,18 @@ lvim.plugins = {
 		end,
 	},
 
+	{
+		"folke/noice.nvim",
+		event = "VeryLazy",
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+		},
+		enabled = settings.noice,
+		config = function()
+			local opts = require("lua.user.configs.noice")
+			require("noice").setup(opts)
+		end,
+	},
 }
 
 reload("lua.user.configs.init")

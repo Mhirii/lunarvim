@@ -42,12 +42,8 @@ reload("user.whichkey")
 
 --
 -- TODO: Aerial
--- TODO: bqf
--- TODO: cmp
 -- TODO: Harpoon
 -- TODO: inlayhints
--- TODO: noice
--- TODO: notify
 -- TODO: tmux
 -- TODO: custom lualine
 -- TODO: Override tree
