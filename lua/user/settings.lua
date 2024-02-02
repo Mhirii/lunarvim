@@ -30,6 +30,10 @@ M.surround = true
 -- better overall experience with marks
 M.marks = true
 
+-- good
 M.lsplens = true
+
+-- edit your fs like you edit your buffers
+M.oil = true
 
 return M

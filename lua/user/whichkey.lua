@@ -76,9 +76,9 @@ lvim.builtin.which_key.mappings["p"] = {
 
 lvim.builtin.which_key.mappings["q"] = {
 	name = "Session",
-	s = { [[<cmd>lua require("persistence").load()<cr>]], "󱋢 Load Session for cwd" },
-	l = { [[<cmd>lua require("persistence").load({ last = true })<cr>]], "󰋚 Load Last Session" },
-	d = { [[<cmd>lua require("persistence").stop()<cr>]], "󱫫 Stop Saving Session" },
+	s = { '<cmd>lua require("persistence").load()<cr>', "󱋢 Load Session for cwd" },
+	l = { '<cmd>lua require("persistence").load({ last = true })<cr>', "󰋚 Load Last Session" },
+	d = { '<cmd>lua require("persistence").stop()<cr>', "󱫫 Stop Saving Session" },
 }
 
 lvim.builtin.which_key.mappings["s"] = {
@@ -99,4 +99,9 @@ lvim.builtin.which_key.mappings["s"] = {
 		"<cmd>lua require('telescope.builtin').colorscheme({enable_preview = true})<cr>",
 		"󱥚 Colorscheme with Preview",
 	},
+}
+lvim.builtin.which_key.mappings["t"] = {
+	name = "Toggle",
+	o = { "<cmd>Oil<CR>", "󰉕 Toggle Oil" },
+	l = { ":LspLensToggle<CR>", "󰙎 Toggle Lens" },
 }

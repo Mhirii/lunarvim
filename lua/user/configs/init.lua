@@ -31,3 +31,7 @@ end
 if settings.lsplens then
 	reload("lua.user.configs.lsplens")
 end
+
+if settings.oil then
+	reload("lua.user.configs.oil")
+end

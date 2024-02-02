@@ -40,6 +40,7 @@ lvim.plugins = {
 	{
 		"echasnovski/mini.surround",
 		version = "*",
+		event = "VeryLazy",
 		enabled = settings.surround,
 		config = function()
 			require("mini.surround").setup()
@@ -57,6 +58,16 @@ lvim.plugins = {
 		"VidocqH/lsp-lens.nvim",
 		enabled = settings.lsplens,
 	},
+	{
+		"stevearc/oil.nvim",
+		event = "VeryLazy",
+		enabled = settings.oil,
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			require("oil").setup()
+		end,
+	},
+	{
 }
 
 reload("lua.user.configs.init")
