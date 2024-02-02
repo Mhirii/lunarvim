@@ -15,3 +15,7 @@ end
 if settings.persist then
 	reload("lua.user.configs.persist")
 end
+
+if settings.glance then
+	reload("lua.user.configs.glance")
+end

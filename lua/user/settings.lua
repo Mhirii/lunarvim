@@ -15,4 +15,7 @@ M.persist = true
 -- Escape when you type jj or jk
 M.escape = true
 
+-- Peek (like vscode)
+M.glance = true
+
 return M

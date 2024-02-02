@@ -28,6 +28,11 @@ lvim.plugins = {
 			reload("better_escape").setup()
 		end,
 	},
+	{
+		"dnlhc/glance.nvim",
+		event = "BufRead",
+		enabled = settings.glance,
+	},
 }
 
 reload("lua.user.configs.init")
