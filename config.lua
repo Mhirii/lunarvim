@@ -3,6 +3,7 @@
 -- =========================================
 reload("user.options")
 reload("user.utils")
+reload("user.settings")
 
 -- Override Lunarvim defaults
 -- =========================================
@@ -49,7 +50,6 @@ reload("user.whichkey")
 -- TODO: numb
 -- TODO: noice
 -- TODO: notify
--- TODO: surround
 -- TODO: trouble
 -- TODO: tmux
 -- TODO: codeium

@@ -35,8 +35,15 @@ lvim.plugins = {
 	},
 	{
 		"karb94/neoscroll.nvim",
-		event = "BufRead",
 		enabled = settings.neoscroll,
+	},
+	{
+		"echasnovski/mini.surround",
+		version = "*",
+		enabled = settings.surround,
+		config = function()
+			require("mini.surround").setup()
+		end,
 	},
 }
 

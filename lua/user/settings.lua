@@ -25,4 +25,6 @@ else
 	M.neoscroll = true
 end
 
+M.surround = true
+
 return M
