@@ -138,6 +138,12 @@ lvim.plugins = {
 			require("dressing").setup(opts)
 		end,
 	},
+
+	{
+		"j-hui/fidget.nvim",
+		event = "VeryLazy",
+		enabled = settings.fidget,
+	},
 }
 
 reload("lua.user.configs.init")

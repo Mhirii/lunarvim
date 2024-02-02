@@ -45,4 +45,7 @@ M.trouble = true
 -- ui improvement
 M.dressing = true
 
+-- cool ui for notifications and LSP progress
+M.fidget = true
+
 return M
