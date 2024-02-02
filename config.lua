@@ -37,9 +37,6 @@ reload("user.whichkey")
 
 --
 -- TODO: Aerial
--- TODO: Harpoon
 -- TODO: custom lualine
--- TODO: Override tree
 -- TODO: Override telescope
 -- TODO: Override todo comments
--- TODO: setup ]d [d

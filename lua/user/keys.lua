@@ -47,3 +47,16 @@ normal["<leader><leader>h"] = { require("smart-splits").swap_buf_left, "Swap buf
 normal["<leader><leader>j"] = { require("smart-splits").swap_buf_down, "Swap buffer down" }
 normal["<leader><leader>k"] = { require("smart-splits").swap_buf_up, "Swap buffer up" }
 normal["<leader><leader>l"] = { require("smart-splits").swap_buf_right, "Swap buffer right" }
+
+normal["]d"] = {
+	function()
+		vim.diagnostic.goto_next({ float = { border = "rounded" } })
+	end,
+	"Next diagnostic",
+}
+normal["[d"] = {
+	function()
+		vim.diagnostic.goto_prev({ float = { border = "rounded" } })
+	end,
+	"Prev diagnostic",
+}
