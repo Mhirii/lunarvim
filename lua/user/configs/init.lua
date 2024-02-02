@@ -43,7 +43,3 @@ end
 if settings.dressing then
 	reload("lua.user.configs.dressing")
 end
-
-if settings.fidget then
-	reload("lua.user.configs.fidget")
-end

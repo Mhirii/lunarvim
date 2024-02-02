@@ -143,7 +143,12 @@ lvim.plugins = {
 		"j-hui/fidget.nvim",
 		event = "VeryLazy",
 		enabled = settings.fidget,
+		config = function()
+			local opts = require("lua.user.configs.fidget")
+			require("fidget").setup(opts)
+		end,
 	},
+
 }
 
 reload("lua.user.configs.init")

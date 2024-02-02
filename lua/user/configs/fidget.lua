@@ -1,4 +1,4 @@
-reload("fidget").setup({
+return {
 	progress = {
 		poll_rate = 0, -- How and when to poll for progress messages
 		suppress_on_insert = false, -- Suppress new messages while in insert mode
@@ -108,4 +108,4 @@ reload("fidget").setup({
 		-- Where Fidget writes its logs to
 		path = string.format("%s/fidget.nvim.log", vim.fn.stdpath("cache")),
 	},
-})
+}
