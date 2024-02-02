@@ -18,33 +18,33 @@ lvim.builtin.which_key.mappings["f"] = {
 lvim.builtin.which_key.mappings["b"] = {
 	name = "Buffers",
 	j = { "<cmd>BufferLinePick<cr>", "󱝵 Jump To Buffer" },
-	f = { "<cmd>Telescope buffers previewer=false<cr>", "󰱽 Find Buffer" },
-	b = { "<cmd>BufferLineCyclePrev<cr>", "󰮳 Previous Buffer" },
-	n = { "<cmd>BufferLineCycleNext<cr>", "󰮱 Next Buffer" },
+	f = { "<cmd>Telescope buffers previewer=false<cr>", "󰮗 Find Buffer" },
+	b = { "<cmd>BufferLineCyclePrev<cr>", "󰜱 Previous Buffer" },
+	n = { "<cmd>BufferLineCycleNext<cr>", "󰜴 Next Buffer" },
 	e = {
 		"<cmd>BufferLinePickClose<cr>",
 		"󱝵 Pick which Buffer to Close",
 	},
-	H = { "<cmd>BufferLineCloseLeft<cr>", "󱪠 Close all to the Left" },
+	H = { "<cmd>BufferLineCloseLeft<cr>", "󰓊 Close all to the Left" },
 	L = {
 		"<cmd>BufferLineCloseRight<cr>",
-		"󱪠 Close all to the Right",
+		"󰓊 Close all to the Right",
 	},
 	D = {
 		"<cmd>BufferLineSortByDirectory<cr>",
-		"󱪖 Sort by Directory",
+		"󰒼 Sort by Directory",
 	},
 	E = {
 		"<cmd>BufferLineSortByExtension<cr>",
-		"󱪖 Sort by Extension",
+		"󰖽 Sort by Extension",
 	},
 	h = {
 		"<cmd>BufferLineMovePrev<CR>",
-		"󱪔 Move Buffer to Right",
+		"󰜶 Move Buffer to Right",
 	},
 	l = {
 		"<cmd>BufferLineMoveNext<CR>",
-		"󱪔 Move Buffer to Left",
+		"󰜳 Move Buffer to Left",
 	},
 }
 
