@@ -17,24 +17,24 @@ lvim.builtin.which_key.mappings["f"] = {
 
 lvim.builtin.which_key.mappings["b"] = {
 	name = "Buffers",
-	j = { "<cmd>BufferLinePick<cr>", "󱝵 Jump To Buffer" },
-	f = { "<cmd>Telescope buffers previewer=false<cr>", "󱦞 Find Buffer" },
 	b = { "<cmd>BufferLineCyclePrev<cr>", "󰜱 Previous Buffer" },
-	n = { "<cmd>BufferLineCycleNext<cr>", "󰜴 Next Buffer" },
-	e = { "<cmd>BufferLinePickClose<cr>", "󱝵 Pick which Buffer to Close" },
-	H = { "<cmd>BufferLineCloseLeft<cr>", "󰭌 Close all to the Left" },
-	L = { "<cmd>BufferLineCloseRight<cr>", "󰭌 Close all to the Right" },
 	D = { "<cmd>BufferLineSortByDirectory<cr>", "󰒼 Sort by Directory" },
 	E = { "<cmd>BufferLineSortByExtension<cr>", "󰖽 Sort by Extension" },
+	e = { "<cmd>BufferLinePickClose<cr>", "󱝵 Pick which Buffer to Close" },
+	f = { "<cmd>Telescope buffers previewer=false<cr>", "󱦞 Find Buffer" },
 	h = { "<cmd>BufferLineMovePrev<CR>", "󰜶 Move Buffer to Right" },
+	H = { "<cmd>BufferLineCloseLeft<cr>", "󰭌 Close all to the Left" },
+	j = { "<cmd>BufferLinePick<cr>", "󱝵 Jump To Buffer" },
+	L = { "<cmd>BufferLineCloseRight<cr>", "󰭌 Close all to the Right" },
 	l = { "<cmd>BufferLineMoveNext<CR>", "󰜳 Move Buffer to Left" },
+	n = { "<cmd>BufferLineCycleNext<cr>", "󰜴 Next Buffer" },
 }
 
 lvim.builtin.which_key.mappings["c"] = {
 	name = "Code",
 	a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "󰚔 Code Action" },
-	f = { ":lua require('conform').format()<cr>", "󰉢 Format" },
 	d = { "<cmd>Telescope diagnostics bufnr=0 theme=get_ivy<cr>", "󱂩 Buffer Diagnostics" },
+	f = { ":lua require('conform').format()<cr>", "󰉢 Format" },
 	w = { "<cmd>Telescope diagnostics<cr>", "󱂬 Diagnostics" },
 }
 lvim.builtin.which_key.vmappings["c"] = {
@@ -44,72 +44,63 @@ lvim.builtin.which_key.vmappings["c"] = {
 
 lvim.builtin.which_key.mappings["g"] = {
 	name = "Git",
+	b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+	C = { "<cmd>Telescope git_bcommits<cr>", "Checkout commit(for current file)" },
+	c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
+	d = { "<cmd>Gitsigns diffthis HEAD<cr>", "Git Diff" },
 	g = { "<cmd>lua require 'lvim.core.terminal'.lazygit_toggle()<cr>", "Lazygit" },
 	j = { "<cmd>lua require 'gitsigns'.next_hunk({navigation_message = false})<cr>", "Next Hunk" },
 	k = { "<cmd>lua require 'gitsigns'.prev_hunk({navigation_message = false})<cr>", "Prev Hunk" },
 	l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
-	p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
-	r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
-	R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
-	s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
-	u = {
-		"<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
-		"Undo Stage Hunk",
-	},
 	o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
-	b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
-	c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
-	C = {
-		"<cmd>Telescope git_bcommits<cr>",
-		"Checkout commit(for current file)",
-	},
-	d = {
-		"<cmd>Gitsigns diffthis HEAD<cr>",
-		"Git Diff",
-	},
+	p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
+	R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
+	r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
+	s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
+	u = { "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", "Undo Stage Hunk" },
 }
 
 lvim.builtin.which_key.mappings["p"] = {
 	name = "Preview",
-	l = { "<cmd>Lazy<cr>", "󰒲 Lazy" },
-	d = { ":Glance definitions<CR>", " Preview definition" },
-	r = { ":Glance references<CR>", " Preview references" },
-	i = { ":Glance implementations<CR>", " Preview implementations" },
 	D = { ":Glance type_definitions<CR>", " Preview type_definitions" },
+	d = { ":Glance definitions<CR>", " Preview definition" },
+	i = { ":Glance implementations<CR>", " Preview implementations" },
+	l = { "<cmd>Lazy<cr>", "󰒲 Lazy" },
+	r = { ":Glance references<CR>", " Preview references" },
 }
 
 lvim.builtin.which_key.mappings["q"] = {
 	name = "Session",
-	s = { '<cmd>lua require("persistence").load()<cr>', "󱋢 Load Session for cwd" },
-	l = { '<cmd>lua require("persistence").load({ last = true })<cr>', "󰋚 Load Last Session" },
 	d = { '<cmd>lua require("persistence").stop()<cr>', "󱫫 Stop Saving Session" },
+	l = { '<cmd>lua require("persistence").load({ last = true })<cr>', "󰋚 Load Last Session" },
+	s = { '<cmd>lua require("persistence").load()<cr>', "󱋢 Load Session for cwd" },
 }
 
 lvim.builtin.which_key.mappings["s"] = {
 	name = "Search",
+	C = { "<cmd>Telescope commands<cr>", "󱆃 Commands" },
 	b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
 	c = { "<cmd>Telescope colorscheme<cr>", "󱥚 Colorscheme" },
 	d = { "<CMD>Telescope zoxide list<CR>", "󰉕 Zoxide" },
 	f = { "<cmd>Telescope find_files<cr>", "󰮗 Find File" },
-	h = { "<cmd>Telescope help_tags<cr>", "󰋖 Find Help" },
 	H = { "<cmd>Telescope highlights<cr>", "󰸱 Find highlight groups" },
-	M = { "<cmd>Telescope man_pages<cr>", "󱔘 Man Pages" },
-	r = { "<cmd>Telescope oldfiles<cr>", "󱋢 Open Recent File" },
-	R = { "<cmd>Telescope registers<cr>", "󱘟 Registers" },
-	t = { "<cmd>Telescope live_grep<cr>", "󱩾 Text" },
+	h = { "<cmd>Telescope help_tags<cr>", "󰋖 Find Help" },
 	k = { "<cmd>Telescope keymaps<cr>", "󰥻 Keymaps" },
-	C = { "<cmd>Telescope commands<cr>", "󱆃 Commands" },
 	l = { "<cmd>Telescope resume<cr>", "󰋚 Resume last search" },
+	M = { "<cmd>Telescope man_pages<cr>", "󱔘 Man Pages" },
 	p = {
 		"<cmd>lua require('telescope.builtin').colorscheme({enable_preview = true})<cr>",
 		"󱥚 Colorscheme with Preview",
 	},
+	R = { "<cmd>Telescope registers<cr>", "󱘟 Registers" },
+	r = { "<cmd>Telescope oldfiles<cr>", "󱋢 Open Recent File" },
+	t = { "<cmd>Telescope live_grep<cr>", "󱩾 Text" },
 }
 
 lvim.builtin.which_key.mappings["t"] = {
 	name = "Toggle",
-	o = { ":lua require('oil').toggle_float()<CR>", "󰉕 Toggle Oil" },
-	l = { ":LspLensToggle<CR>", "󰙎 Toggle Lens" },
-	r = { ':lua require("trouble").toggle()<CR>', "󱂩 Toggle Trouble" },
 	f = { ':lua require("trouble").toggle("quickfix")<CR>', "󰌵 Toggle QuickFix (Trouble)" },
+	l = { ":LspLensToggle<CR>", "󰙎 Toggle Lens" },
+	o = { ":lua require('oil').toggle_float()<CR>", "󰉕 Toggle Oil" },
+	r = { ':lua require("trouble").toggle()<CR>', "󱂩 Toggle Trouble" },
 }
