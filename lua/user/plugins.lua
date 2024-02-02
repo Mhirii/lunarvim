@@ -55,6 +55,21 @@ lvim.plugins = {
 	},
 
 	{
+		"echasnovski/mini.indentscope",
+		version = "false",
+		event = "BufRead",
+		enabled = settings.indentscope,
+		config = function()
+			require("mini.indentscope").setup({
+				draw = {
+					delay = 50,
+				},
+				symbol = "│",
+			})
+		end,
+	},
+
+	{
 		"chentoast/marks.nvim",
 		event = "BufRead",
 		enabled = settings.marks,

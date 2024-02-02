@@ -1,5 +1,8 @@
 local M = {}
 
+lvim.builtin.indentlines.active = false
+lvim.builtin.project.active = false
+lvim.builtin.treesitter.auto_install = true
 -- similar to marks but better
 M.bookmarks = true
 
@@ -27,6 +30,8 @@ end
 
 M.surround = true
 
+-- beautiful indent lines
+M.indentscope = true
 -- better overall experience with marks
 M.marks = true
 

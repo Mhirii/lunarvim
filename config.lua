@@ -45,6 +45,7 @@ reload("user.whichkey")
 -- TODO: Harpoon
 -- TODO: inlayhints
 -- TODO: tmux
+-- TODO: Telescope Zoxide
 -- TODO: custom lualine
 -- TODO: Override tree
 -- TODO: Override telescope
