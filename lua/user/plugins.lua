@@ -45,6 +45,10 @@ lvim.plugins = {
 			require("mini.surround").setup()
 		end,
 	},
+	{
+		"VidocqH/lsp-lens.nvim",
+		enabled = settings.lsplens,
+	},
 }
 
 reload("lua.user.configs.init")

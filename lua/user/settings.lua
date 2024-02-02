@@ -27,4 +27,9 @@ end
 
 M.surround = true
 
+-- better overall experience with marks
+M.marks = true
+
+M.lsplens = true
+
 return M

@@ -23,3 +23,7 @@ end
 if settings.neoscroll then
 	reload("lua.user.configs.neoscroll")
 end
+
+if settings.lsplens then
+	reload("lua.user.configs.lsplens")
+end
