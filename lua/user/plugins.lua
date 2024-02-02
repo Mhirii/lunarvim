@@ -224,6 +224,13 @@ lvim.plugins = {
 			{ "<leader>sx", "<CMD>Telescope zoxide list<CR>" },
 		},
 	},
+
+	{
+		"lvimuser/lsp-inlayhints.nvim",
+		enabled = settings.inlayhints,
+		config = function()
+			reload("user.configs.inlayhints")
+		end,
+	},
 }
 
-reload("lua.user.configs.init")

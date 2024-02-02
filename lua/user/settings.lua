@@ -1,8 +1,13 @@
 local M = {}
 
+-- Overrides
+-- =========================================
 lvim.builtin.indentlines.active = false
 lvim.builtin.project.active = false
 lvim.builtin.treesitter.auto_install = true
+
+-- New Plugins
+-- =========================================
 
 -- similar to marks but better
 M.bookmarks = true
@@ -54,5 +59,8 @@ M.dressing = true
 
 -- cool ui for notifications and LSP progress
 M.fidget = true
+
+-- hints method params
+M.inlayhints = true
 
 return M
