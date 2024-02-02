@@ -58,6 +58,15 @@ lvim.plugins = {
 		"VidocqH/lsp-lens.nvim",
 		enabled = settings.lsplens,
 	},
+
+	{
+		"nacro90/numb.nvim",
+		event = "BufRead",
+		config = function()
+			require("numb").setup()
+		end,
+	},
+
 	{
 		"stevearc/oil.nvim",
 		event = "VeryLazy",

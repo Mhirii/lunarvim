@@ -37,6 +37,10 @@ lvim.builtin.which_key.mappings["c"] = {
 	d = { "<cmd>Telescope diagnostics bufnr=0 theme=get_ivy<cr>", "󱂩 Buffer Diagnostics" },
 	w = { "<cmd>Telescope diagnostics<cr>", "󱂬 Diagnostics" },
 }
+lvim.builtin.which_key.vmappings["c"] = {
+	name = "Code",
+	a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "󰚔 Code Action" },
+}
 
 lvim.builtin.which_key.mappings["g"] = {
 	name = "Git",
@@ -100,6 +104,7 @@ lvim.builtin.which_key.mappings["s"] = {
 		"󱥚 Colorscheme with Preview",
 	},
 }
+
 lvim.builtin.which_key.mappings["t"] = {
 	name = "Toggle",
 	o = { "<cmd>Oil<CR>", "󰉕 Toggle Oil" },
