@@ -97,6 +97,6 @@ lvim.builtin.which_key.mappings["s"] = {
 	l = { "<cmd>Telescope resume<cr>", "󰋚 Resume last search" },
 	p = {
 		"<cmd>lua require('telescope.builtin').colorscheme({enable_preview = true})<cr>",
-		"Colorscheme with Preview",
+		"󱥚 Colorscheme with Preview",
 	},
 }

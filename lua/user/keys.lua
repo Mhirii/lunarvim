@@ -18,8 +18,16 @@ normal["<m-/>"] = { "<Plug>(comment_toggle_linewise_current)", "󰆉 Toggle Comm
 -- Utils
 normal["<Esc>"] = { "<cmd>nohlsearch<CR>", "No Highlight" }
 normal["<C-s>"] = { "<cmd>:w<CR>", "󱇨 Save" }
+normal["gx"] = { [[:silent execute '!$BROWSER ' . shellescape(expand('<cfile>'), 1)<CR>]], "open in browser", opts }
+
+-- Center cursor after finding next/prev march
+normal["n"] = false
+normal["N"] = false
 normal["n"] = { "nzz", "󰜴 Next Match" }
 normal["N"] = { "Nzz", "󰜱 Prev Match" }
+
+-- better hover doc
 normal["K"] = { ":lua require('user.utils').show_doc()<CR>", "󱓷 Show Documentation" }
-normal["gx"] = { [[:silent execute '!$BROWSER ' . shellescape(expand('<cfile>'), 1)<CR>]], "open in browser", opts }
+
+-- live grep
 normal["<leader>/"] = { "<cmd>Telescope live_grep<cr>", "󱩾 Grep" }
