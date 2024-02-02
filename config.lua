@@ -1,7 +1,8 @@
 -- #abcdef
 -- Customization
 -- =========================================
-reload "user.options"
+reload("user.options")
+reload("user.utils")
 
 -- Override Lunarvim defaults
 -- =========================================
@@ -26,7 +27,7 @@ reload "user.options"
 
 -- Additional Plugins
 -- =========================================
-reload "user.plugins"
+reload("user.plugins")
 
 -- Autocommands
 -- =========================================
@@ -34,13 +35,13 @@ reload "user.plugins"
 
 -- Additional Keybindings
 -- =========================================
+reload("user.keys")
 -- require("user.keybinds").config()
 
 --
 -- TODO: Aerial
 -- TODO: bqf
 -- TODO: cmp
--- TODO: conform
 -- TODO: lazygit
 -- TODO: Harpoon
 -- TODO: icons
@@ -55,7 +56,7 @@ reload "user.plugins"
 -- TODO: trouble
 -- TODO: tmux
 -- TODO: codeium
--- TODO: custom lualine 
+-- TODO: custom lualine
 -- TODO: Override binds
 -- TODO: Override tree
 -- TODO: Override telescope
