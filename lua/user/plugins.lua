@@ -1,37 +1,14 @@
 lvim.plugins = {
-	{
-		"crusj/bookmarks.nvim",
-		dependencies = { "nvim-web-devicons" },
-		config = function()
-			reload("user.configs.bookmarks")
-		end,
-	},
-
+	-- =========================================
+	--                  Editor
+	-- ========================================={
 	{
 		"stevearc/conform.nvim",
 		config = function()
 			reload("user.configs.conform")
 		end,
 	},
-
 	{ "jose-elias-alvarez/null-ls.nvim", enabled = false },
-
-	{
-		"folke/persistence.nvim",
-		event = "BufReadPre",
-		config = function()
-			reload("user.configs.persist")
-		end,
-	},
-
-	{
-		"max397574/better-escape.nvim",
-		event = "InsertEnter",
-		config = function()
-			reload("better_escape").setup()
-		end,
-	},
-
 	{
 		"dnlhc/glance.nvim",
 		event = "BufRead",
@@ -39,61 +16,18 @@ lvim.plugins = {
 			reload("user.configs.glance")
 		end,
 	},
-
-	{
-		"karb94/neoscroll.nvim",
-		config = function()
-			reload("user.configs.neoscroll")
-		end,
-	},
-
-	{
-		"echasnovski/mini.surround",
-		version = "*",
-		event = "VeryLazy",
-		config = function()
-			require("mini.surround").setup()
-		end,
-	},
-
-	{
-		"echasnovski/mini.indentscope",
-		version = "false",
-		event = "BufRead",
-		config = function()
-			require("mini.indentscope").setup({
-				draw = {
-					delay = 50,
-				},
-				symbol = "│",
-			})
-		end,
-	},
-
-	{
-		"chentoast/marks.nvim",
-		event = "BufRead",
-		config = function(_, opts)
-			-- require("marks").setup(opts)
-			reload("user.configs.marks")
-		end,
-	},
-
 	{
 		"VidocqH/lsp-lens.nvim",
 		config = function()
 			reload("user.configs.lsplens")
 		end,
 	},
-
 	{
-		"nacro90/numb.nvim",
-		event = "BufRead",
+		"lvimuser/lsp-inlayhints.nvim",
 		config = function()
-			require("numb").setup()
+			reload("user.configs.inlayhints")
 		end,
 	},
-
 	{
 		"stevearc/oil.nvim",
 		event = "VeryLazy",
@@ -107,22 +41,6 @@ lvim.plugins = {
 			reload("user.configs.oil")
 		end,
 	},
-
-	{
-		"nguyenvukhang/nvim-toggler",
-		config = function()
-			require("nvim-toggler").setup({})
-		end,
-		keys = {
-			{
-				"<leader>i",
-				mode = { "n", "v" },
-				':lua require("nvim-toggler").toggle() <CR>',
-				desc = "󰨙 Toggle",
-			},
-		},
-	},
-
 	{
 		"Exafunction/codeium.nvim",
 		keys = {
@@ -139,7 +57,35 @@ lvim.plugins = {
 			table.insert(lvim.builtin.cmp.formatting.source_names, { codeium = "Codeium" })
 		end,
 	},
-
+	{
+		"folke/todo-comments.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		config = function()
+			reload("user.configs.todo")
+		end,
+	},
+	{
+		"norcalli/nvim-colorizer.lua",
+		config = function()
+			reload("colorizer").setup()
+		end,
+	},
+	-- =========================================}
+	--                    UI
+	-- ========================================={
+	{
+		"echasnovski/mini.indentscope",
+		version = "false",
+		event = "BufRead",
+		config = function()
+			require("mini.indentscope").setup({
+				draw = {
+					delay = 50,
+				},
+				symbol = "│",
+			})
+		end,
+	},
 	{
 		"folke/trouble.nvim",
 		event = "VeryLazy",
@@ -148,7 +94,6 @@ lvim.plugins = {
 			reload("user.configs.trouble")
 		end,
 	},
-
 	{
 		"stevearc/dressing.nvim",
 		lazy = false,
@@ -157,16 +102,6 @@ lvim.plugins = {
 			reload("user.configs.dressing")
 		end,
 	},
-
-	{
-		"j-hui/fidget.nvim",
-		event = "VeryLazy",
-		config = function()
-			local opts = require("user.configs.fidget")
-			require("fidget").setup(opts)
-		end,
-	},
-
 	{
 		"folke/noice.nvim",
 		event = "VeryLazy",
@@ -178,7 +113,109 @@ lvim.plugins = {
 			require("noice").setup(opts)
 		end,
 	},
+	{
+		"j-hui/fidget.nvim",
+		event = "VeryLazy",
+		config = function()
+			local opts = require("user.configs.fidget")
+			require("fidget").setup(opts)
+		end,
+	},
 
+	-- =========================================}
+	--                Eye candy
+	-- ========================================={
+	{
+		"karb94/neoscroll.nvim",
+		config = function()
+			reload("user.configs.neoscroll")
+		end,
+	},
+	{
+		"nacro90/numb.nvim",
+		event = "BufRead",
+		config = function()
+			require("numb").setup()
+		end,
+	},
+
+	-- =========================================}
+	--                  Motions
+	-- ========================================={
+	{
+		"chentoast/marks.nvim",
+		event = "BufRead",
+		config = function(_, opts)
+			-- require("marks").setup(opts)
+			reload("user.configs.marks")
+		end,
+	},
+	{
+		"crusj/bookmarks.nvim",
+		dependencies = { "nvim-web-devicons" },
+		config = function()
+			reload("user.configs.bookmarks")
+		end,
+	},
+	{
+		"echasnovski/mini.surround",
+		version = "*",
+		event = "VeryLazy",
+		config = function()
+			require("mini.surround").setup()
+		end,
+	},
+	{
+		"max397574/better-escape.nvim",
+		event = "InsertEnter",
+		config = function()
+			reload("better_escape").setup()
+		end,
+	},
+
+	-- =========================================}
+	--                Utility
+	-- ========================================={
+	{
+		"folke/persistence.nvim",
+		event = "BufReadPre",
+		config = function()
+			reload("user.configs.persist")
+		end,
+	},
+	{
+		"nguyenvukhang/nvim-toggler",
+		config = function()
+			require("nvim-toggler").setup({})
+		end,
+		keys = {
+			{
+				"<leader>i",
+				mode = { "n", "v" },
+				':lua require("nvim-toggler").toggle() <CR>',
+				desc = "󰨙 Toggle",
+			},
+		},
+	},
+	{
+		"jvgrootveld/telescope-zoxide",
+		config = function()
+			require("telescope").load_extension("zoxide")
+		end,
+		keys = {
+			{ "<leader>sx", "<CMD>Telescope zoxide list<CR>" },
+		},
+	},
+	{
+		"mrjones2014/smart-splits.nvim",
+		config = function()
+			reload("user.configs.smartsplits")
+		end,
+	},
+
+	-- =========================================}
+	--                  Themes
+	-- ========================================={
 	{
 		"rose-pine/neovim",
 		name = "rose-pine",
@@ -197,42 +234,5 @@ lvim.plugins = {
 		lazy = false,
 		priority = 1000,
 		opts = {},
-	},
-
-	{
-		"jvgrootveld/telescope-zoxide",
-		config = function()
-			require("telescope").load_extension("zoxide")
-		end,
-		keys = {
-			{ "<leader>sx", "<CMD>Telescope zoxide list<CR>" },
-		},
-	},
-
-	{
-		"lvimuser/lsp-inlayhints.nvim",
-		config = function()
-			reload("user.configs.inlayhints")
-		end,
-	},
-
-	{
-		"mrjones2014/smart-splits.nvim",
-		config = function()
-			reload("user.configs.smartsplits")
-		end,
-	},
-	{
-		"folke/todo-comments.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
-		config = function()
-			reload("user.configs.todo")
-		end,
-	},
-	{
-		"norcalli/nvim-colorizer.lua",
-		config = function()
-			reload("colorizer").setup()
-		end,
 	},
 }
