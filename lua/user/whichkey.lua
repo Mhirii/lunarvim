@@ -9,6 +9,10 @@ lvim.builtin.which_key.mappings["h"] = {}
 lvim.builtin.which_key.mappings[";"] = { "<cmd>Alpha<CR>", "󰕮 Dashboard" }
 lvim.builtin.which_key.mappings["e"] = { "<cmd>NvimTreeToggle<CR>", "󰙅 Explorer" }
 lvim.builtin.which_key.mappings["f"] = {
+	"<cmd>Telescope find_files<cr>",
+	"󰩊 Find File",
+}
+lvim.builtin.which_key.mappings["<Tab>"] = {
 	function()
 		require("lvim.core.telescope.custom-finders").find_project_files({ previewer = false })
 	end,
@@ -98,7 +102,12 @@ lvim.builtin.which_key.mappings["s"] = {
 	b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
 	c = { "<cmd>Telescope colorscheme<cr>", "󱥚 Colorscheme" },
 	d = { "<CMD>TodoTelescope<CR>", "󱞀 Todo Comment (Telescope)" },
-	f = { "<cmd>Telescope find_files<cr>", "󰮗 Find File" },
+	f = {
+		function()
+			require("lvim.core.telescope.custom-finders").find_project_files({ previewer = false })
+		end,
+		"󰮗 Find File",
+	},
 	H = { "<cmd>Telescope highlights<cr>", "󰸱 Find highlight groups" },
 	h = { "<cmd>Telescope help_tags<cr>", "󰋖 Find Help" },
 	k = { "<cmd>Telescope keymaps<cr>", "󰥻 Keymaps" },
