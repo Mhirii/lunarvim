@@ -70,6 +70,7 @@ lvim.plugins = {
 			reload("colorizer").setup()
 		end,
 	},
+
 	-- =========================================}
 	--                 Languages
 	-- ========================================={
@@ -222,6 +223,12 @@ lvim.plugins = {
 		config = function()
 			reload("user.configs.smartsplits")
 		end,
+	},
+	{
+		"fredeeb/tardis.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		config = true,
+		cmd = "Tardis",
 	},
 
 	-- =========================================}
