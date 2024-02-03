@@ -39,6 +39,7 @@ lvim.builtin.which_key.mappings["c"] = {
 	a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "󰚔 Code Action" },
 	d = { "<cmd>Telescope diagnostics bufnr=0 theme=get_ivy<cr>", "󱂩 Buffer Diagnostics" },
 	f = { ":lua require('conform').format()<cr>", "󰉢 Format" },
+	i = { "<cmd>Telescope import<cr>", lvim.icons.misc.Package .. " Import" },
 	w = { "<cmd>Telescope diagnostics<cr>", "󱂬 Diagnostics" },
 }
 lvim.builtin.which_key.vmappings["c"] = {

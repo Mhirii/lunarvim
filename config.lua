@@ -47,3 +47,4 @@ end
 -- TODO: Aerial
 -- TODO: custom lualine
 -- TODO: Override telescope
+
