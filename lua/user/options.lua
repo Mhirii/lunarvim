@@ -6,9 +6,10 @@ lvim.builtin.indentlines.active = false
 lvim.builtin.project.active = false
 lvim.builtin.treesitter.auto_install = true
 
-lvim.transparent_window = true
+lvim.transparent_window = vim.g.neovide ~= true
 lvim.lsp.installer.setup.automatic_installation = true
 lvim.format_on_save.enabled = false
+
 vim.opt.backup = false -- creates a backup file
 vim.opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
 vim.opt.cmdheight = 1 -- more space in the neovim command line for displaying messages
@@ -19,7 +20,6 @@ vim.opt.expandtab = true -- convert tabs to spaces
 vim.opt.fileencoding = "utf-8" -- the encoding written to a file
 vim.opt.foldexpr = "" -- set to "nvim_treesitter#foldexpr()" for treesitter based folding
 vim.opt.foldmethod = "manual" -- folding, set to "expr" for treesitter based folding
-vim.opt.guifont = "MonaspiceNe"
 vim.opt.hidden = true -- required to keep multiple buffers and open multiple buffers
 vim.opt.hlsearch = true -- highlight all matches on previous search pattern
 vim.opt.ignorecase = true -- ignore case in search patterns

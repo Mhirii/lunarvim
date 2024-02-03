@@ -35,6 +35,10 @@ reload("user.overrides")
 reload("user.keys")
 reload("user.whichkey")
 
+if vim.g.neovide then
+	reload("user.neovide")
+end
+
 --
 -- TODO: Setup ts lsp
 -- TODO: Setup vue lsp
