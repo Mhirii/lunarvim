@@ -20,7 +20,7 @@ lvim.plugins = {
 			reload("user.configs.conform")
 		end,
 	},
-	{ "jose-elias-alvarez/null-ls.nvim", enabled = true },
+	{ "jose-elias-alvarez/null-ls.nvim", enabled = false },
 	{
 		"dnlhc/glance.nvim",
 		event = "BufRead",
@@ -141,7 +141,7 @@ lvim.plugins = {
 	{
 		"stevearc/dressing.nvim",
 		lazy = false,
-		config = function(_, opts)
+		config = function()
 			-- require("dressing").setup(opts)
 			reload("user.configs.dressing")
 		end,
@@ -163,6 +163,16 @@ lvim.plugins = {
 		config = function()
 			local opts = require("user.configs.fidget")
 			require("fidget").setup(opts)
+		end,
+	},
+	{
+		"stevearc/aerial.nvim",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+			"nvim-tree/nvim-web-devicons",
+		},
+		config = function()
+			reload("user.configs.aerial")
 		end,
 	},
 
@@ -189,7 +199,7 @@ lvim.plugins = {
 	{
 		"chentoast/marks.nvim",
 		event = "BufRead",
-		config = function(_, opts)
+		config = function()
 			-- require("marks").setup(opts)
 			reload("user.configs.marks")
 		end,

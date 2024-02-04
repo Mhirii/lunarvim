@@ -47,6 +47,8 @@ lvim.builtin.which_key.mappings["c"] = {
 	d = { "<cmd>Telescope diagnostics bufnr=0 theme=get_ivy<cr>", "󱂩 Buffer Diagnostics" },
 	f = { ":lua require('conform').format()<cr>", "󰉢 Format" },
 	i = { "<cmd>Telescope import<cr>", icons.misc.Package .. " Import" },
+	n = { "<cmd>AerialNavToggle<cr>", icons.ui.Layout .. " Aerial Float" },
+	s = { "<cmd>AerialToggle<cr>", icons.ui.SplitHorizontal .. " Aerial Sidebar" },
 	w = { "<cmd>Telescope diagnostics<cr>", "󱂬 Diagnostics" },
 }
 lvim.builtin.which_key.vmappings["c"] = {
