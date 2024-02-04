@@ -17,6 +17,10 @@ lvim.builtin.alpha = {
 	mode = "dashboard",
 }
 
+-- Bufferline
+-- =========================================
+reload("user.bufferline")
+-- Telescope
 -- =========================================
 -- lvim.builtin.telescope.defaults.path_display = { "smart", "absolute", "truncate" }
 lvim.builtin.telescope.defaults.dynamic_preview_title = true

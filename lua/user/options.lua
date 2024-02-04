@@ -4,11 +4,15 @@ local undodir = join_paths(get_cache_dir(), "undo")
 --
 lvim.builtin.indentlines.active = false
 lvim.builtin.project.active = false
+lvim.builtin.breadcrumbs.active = false
 lvim.builtin.treesitter.auto_install = true
+lvim.lsp.installer.setup.automatic_installation = true
 
 lvim.transparent_window = vim.g.neovide ~= true
 lvim.lsp.installer.setup.automatic_installation = true
 lvim.format_on_save.enabled = false
+lvim.reload_config_on_save = true
+lvim.colorscheme = "lunar"
 
 vim.opt.backup = false -- creates a backup file
 vim.opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
