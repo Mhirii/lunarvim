@@ -42,6 +42,23 @@ lvim.plugins = {
 		end,
 	},
 	{
+		"folke/todo-comments.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		config = function()
+			reload("user.configs.todo")
+		end,
+	},
+	{
+		"norcalli/nvim-colorizer.lua",
+		config = function()
+			reload("colorizer").setup()
+		end,
+	},
+
+	-- =========================================}
+	--                    AI
+	-- ========================================={
+	{
 		"Exafunction/codeium.nvim",
 		keys = {
 			{ mode = "n", "<leader>tc", ":lua require('codeium').setup()<CR>", desc = "󱚤 Enable Codeium" },
@@ -58,19 +75,12 @@ lvim.plugins = {
 		end,
 	},
 	{
-		"folke/todo-comments.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
+		"David-Kunz/gen.nvim",
+		enabled = false, --TODO: setup ollama
 		config = function()
-			reload("user.configs.todo")
+			reload("user.configs.gen")
 		end,
 	},
-	{
-		"norcalli/nvim-colorizer.lua",
-		config = function()
-			reload("colorizer").setup()
-		end,
-	},
-
 	-- =========================================}
 	--                 Languages
 	-- ========================================={
