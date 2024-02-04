@@ -46,4 +46,5 @@ end
 -- TODO: Setup rust lsp
 -- TODO: Aerial
 -- TODO: custom lualine
+-- TODO: custom bufferline
 -- TODO: Override telescope

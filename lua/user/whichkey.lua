@@ -4,7 +4,7 @@ lvim.builtin.which_key.mappings["c"] = {}
 lvim.builtin.which_key.mappings["/"] = {}
 lvim.builtin.which_key.mappings["q"] = {}
 lvim.builtin.which_key.mappings["w"] = {}
-lvim.builtin.which_key.mappings["h"] = {}
+-- lvim.builtin.which_key.mappings["h"] = {}
 
 -- Override
 lvim.builtin.which_key.mappings[";"] = { "<cmd>Alpha<CR>", icons.ui.Dashboard .. " Dashboard" }
