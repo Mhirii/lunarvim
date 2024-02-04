@@ -1,3 +1,4 @@
+local M = {}
 local components = reload("lvim.core.lualine.components")
 local colors = reload("user.lualine.colors")
 
@@ -5,18 +6,7 @@ local time = function()
 	return os.date("%H:%M") .. " " .. lvim.icons.misc.Watch
 end
 
-local function diff_source()
-	local gitsigns = vim.b.gitsigns_status_dict
-	if gitsigns then
-		return {
-			added = gitsigns.added,
-			modified = gitsigns.changed,
-			removed = gitsigns.removed,
-		}
-	end
-end
-
-local mode = function()
+local c_mode = function()
 	local mod = vim.fn.mode()
 
 	local normal = " 󰊠 "
@@ -62,51 +52,53 @@ local mode_color = {
 	t = colors.red,
 }
 
-local branch = "%#SLGitIcon#" .. lvim.icons.git.Branch .. "%*" .. "%#SLBranchName#"
+-- Plugin activation indicator
+local function get_file_info()
+	return vim.fn.expand("%:t"), vim.fn.expand("%:e")
+end
 
-return {
-	mode = components.mode,
-	custom_mode = {
-		function()
-			return mode()
-		end,
-		color = function()
-			return { bg = mode_color[vim.fn.mode()], fg = colors.bg }
-		end,
-	},
-	branch = components.branch,
-	custom_branch = {
-		"b:gitsigns_head",
-		icon = branch,
-		color = function()
-			return { bg = colors.bg3, fg = mode_color[vim.fn.mode()] }
-		end,
-	},
-	filename = components.filename,
-	custom_filename = {
-		"filename",
-		color = function()
-			return { bg = colors.bg2, fg = mode_color[vim.fn.mode()] }
-		end,
-		cond = nil,
-	},
-	time = {
-		function()
-			return time()
-		end,
-		color = function()
-			return { bg = mode_color[vim.fn.mode()], fg = colors.bg }
-		end,
-	},
-	diff = components.diff,
-	python_env = components.python_env,
-	diagnostics = components.diagnostics,
-	treesitter = components.treesitter,
-	lsp = components.lsp,
-	location = components.location,
-	progress = components.progress,
-	spaces = components.spaces,
-	encoding = components.encoding,
-	filetype = components.filetype,
-	scrollbar = components.scrollbar,
+M.custom_mode = {
+	function()
+		return c_mode()
+	end,
+	color = function()
+		return { bg = mode_color[vim.fn.mode()], fg = colors.bg }
+	end,
 }
+M.custom_branch = {
+	"b:gitsigns_head",
+	icon = lvim.icons.git.Branch,
+}
+M.custom_filename = {
+	"filename",
+	color = function()
+		return { fg = mode_color[vim.fn.mode()] }
+	end,
+	cond = nil,
+}
+M.time = {
+	function()
+		return time()
+	end,
+	color = function()
+		return { bg = mode_color[vim.fn.mode()], fg = colors.bg }
+	end,
+}
+M.fileinfo = get_file_info()
+
+-- Defaults
+M.mode = components.mode
+M.branch = components.branch
+M.filename = components.filename
+M.diff = components.diff
+M.python_env = components.python_env
+M.diagnostics = components.diagnostics
+M.treesitter = components.treesitter
+M.lsp = components.lsp
+M.location = components.location
+M.progress = components.progress
+M.spaces = components.spaces
+M.encoding = components.encoding
+M.filetype = components.filetype
+M.scrollbar = components.scrollbar
+return M
