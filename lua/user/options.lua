@@ -13,6 +13,7 @@ lvim.lsp.installer.setup.automatic_installation = true
 lvim.format_on_save.enabled = false
 lvim.reload_config_on_save = true
 lvim.colorscheme = "lunar"
+lvim.builtin.lualine.style = "custom"
 
 vim.opt.backup = false -- creates a backup file
 vim.opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard

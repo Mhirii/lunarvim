@@ -1,5 +1,17 @@
 lvim.plugins = {
 	-- =========================================
+	--                  Override
+	-- ========================================={
+	{
+		-- "hoob3rt/lualine.nvim",
+		"nvim-lualine/lualine.nvim",
+		-- "Lunarvim/lualine.nvim",
+		config = function()
+			require("user.lualine").setup()
+		end,
+		event = "VimEnter",
+	},
+	-- =========================================}
 	--                  Editor
 	-- ========================================={
 	{
