@@ -20,7 +20,7 @@ lvim.plugins = {
 			reload("user.configs.conform")
 		end,
 	},
-	{ "jose-elias-alvarez/null-ls.nvim", enabled = false },
+	{ "jose-elias-alvarez/null-ls.nvim", enabled = true },
 	{
 		"dnlhc/glance.nvim",
 		event = "BufRead",
@@ -30,6 +30,16 @@ lvim.plugins = {
 	},
 	{
 		"VidocqH/lsp-lens.nvim",
+		keys = {
+			{
+				mode = "n",
+				"<leader>tl",
+				function()
+					require("lsp-lens").toggle()
+				end,
+				desc = lvim.icons.ui.Comment .. " Toggle Lens",
+			},
+		},
 		config = function()
 			reload("user.configs.lsplens")
 		end,
