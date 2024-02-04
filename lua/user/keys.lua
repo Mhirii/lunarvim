@@ -6,6 +6,9 @@ local visual = map.visual_mode
 
 normal["<leader>/"] = {}
 
+-- So that when i paste over selection, the selection does not replace the register
+-- visual["p"] = { "P", "paste" }
+
 -- Buffer
 normal["H"] = { "<cmd>BufferLineCyclePrev<cr>", "󰜱 Previous" }
 normal["L"] = { "<cmd>BufferLineCycleNext<cr>", "󰜴 Next" }

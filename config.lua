@@ -40,11 +40,8 @@ if vim.g.neovide then
 end
 
 --
--- TODO: Setup ts lsp
--- TODO: Setup vue lsp
+-- TODO: Setup TSC
+-- TODO: typescript tools
+-- TODO: Setup volar
 -- TODO: Setup go lsp
 -- TODO: Setup rust lsp
--- TODO: Aerial
--- TODO: custom lualine
--- TODO: custom bufferline
--- TODO: Override telescope

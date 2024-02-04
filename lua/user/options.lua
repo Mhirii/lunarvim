@@ -15,8 +15,6 @@ lvim.reload_config_on_save = true
 lvim.colorscheme = "lunar"
 lvim.builtin.lualine.style = "custom"
 
-vim.opt.backup = false -- creates a backup file
-vim.opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
 vim.opt.cmdheight = 1 -- more space in the neovim command line for displaying messages
 vim.opt.completeopt = { "menuone", "noselect" }
 vim.opt.conceallevel = 0 -- so that `` is visible in markdown files
@@ -37,7 +35,7 @@ vim.opt.relativenumber = true
 vim.opt.ruler = false
 vim.opt.scrolloff = 8 -- minimal number of screen lines to keep above and below the cursor.
 vim.opt.shiftwidth = 2 -- the number of spaces inserted for each indentation
-vim.opt.showcmd = false
+vim.opt.showcmd = true
 vim.opt.showmode = false -- we don't need to see things like -- INSERT -- anymore
 vim.opt.sidescrolloff = 16 -- minimal number of screen lines to keep left and right of the cursor.
 vim.opt.signcolumn = "yes" -- always show the sign column, otherwise it would shift the text each time
