@@ -1,32 +1,224 @@
 local colors = require("user.colors.init").base_30
 
 local highlights = {
-	background = {
-		fg = colors.grey_fg,
-		bg = colors.black2,
+	warning_diagnostic_visible = {
+		fg = colors.orange,
+		bg = colors.black,
+	},
+	warning_visible = {
+		fg = colors.orange,
+		bg = colors.black,
+	},
+	info_diagnostic_visible = {
+		fg = colors.cyan,
+		bg = colors.black,
+	},
+	info_visible = {
+		fg = colors.cyan,
+		bg = colors.black,
+	},
+	hint_diagnostic_visible = {
+		fg = colors.green,
+		bg = colors.black,
+	},
+	hint_visible = {
+		fg = colors.green,
+		bg = colors.black,
+	},
+	numbers_visible = {
+		fg = colors.light_grey,
+		bg = colors.black,
+	},
+	diagnostic_visible = {
+		fg = colors.red,
+		bg = colors.black,
+	},
+	numbers = {
+		fg = colors.light_grey,
+		bg = colors.black,
 	},
 
-	-- Buffers
+	--
+	separator_selected = {
+		fg = colors.black,
+		bg = colors.black2,
+	},
+	modified_selected = {
+		italic = false,
+		fg = colors.green,
+		bg = colors.black2,
+	},
+	indicator_selected = {
+		fg = colors.black2,
+		bg = colors.black2,
+	},
+	close_button_selected = {
+		fg = colors.red,
+		bg = colors.black2,
+	},
 	buffer_selected = {
 		fg = colors.white,
-		bg = colors.black,
-		gui = "bold",
+		bg = colors.black2,
+		bold = true,
+		italic = false,
 	},
-	buffer_visible = {
+	pick_selected = {
 		fg = colors.light_grey,
 		bg = colors.black2,
+		bold = true,
+		italic = false,
+	},
+	duplicate_selected = {
+		fg = colors.light_grey,
+		bg = colors.black2,
+		italic = false,
+	},
+	error_diagnostic_selected = {
+		fg = colors.red,
+		bg = colors.black2,
+		-- sp = "<colour-value-here>",
+		bold = true,
+		italic = false,
+	},
+	error_selected = {
+		fg = colors.red,
+		bg = colors.black2,
+		-- sp = "<colour-value-here>",
+		bold = true,
+		italic = false,
+	},
+	warning_diagnostic_selected = {
+		fg = colors.red,
+		bg = colors.black2,
+		-- sp = warning_diagnostic_fg,
+		bold = true,
+		italic = false,
+	},
+	warning_selected = {
+		fg = colors.red,
+		bg = colors.black2,
+		-- sp = "<colour-value-here>",
+		bold = true,
+		italic = false,
+	},
+	info_diagnostic_selected = {
+		fg = colors.cyan,
+		bg = colors.black2,
+		bold = true,
+		italic = false,
+	},
+	info_selected = {
+		fg = colors.cyan,
+		bg = colors.black2,
+		-- sp = "<colour-value-here>",
+		bold = true,
+		italic = false,
+	},
+	hint_diagnostic_selected = {
+		fg = colors.green,
+		bg = colors.black2,
+		-- sp = "<colour-value-here>",
+		bold = true,
+		italic = false,
+	},
+	diagnostic_selected = {
+		fg = colors.red,
+		bg = colors.black2,
+		bold = true,
+		italic = false,
+	},
+	hint_selected = {
+		fg = colors.green,
+		bg = colors.black2,
+		bold = true,
+		italic = false,
 	},
 
+	diagnostic = {
+		fg = colors.red,
+		bg = colors.black,
+	},
+	hint = {
+		fg = colors.green,
+		bg = colors.black,
+	},
+	hint_diagnostic = {
+		fg = colors.green,
+		bg = colors.black,
+	},
+	info = {
+		fg = colors.cyan,
+		-- sp = "<colour-value-here>",
+		bg = colors.black,
+	},
+	info_diagnostic = {
+		fg = colors.cyan,
+		-- sp = "<colour-value-here>",
+		bg = colors.black,
+	},
+	warning = {
+		fg = colors.red,
+		bg = colors.black,
+		-- sp = "<colour-value-here>",
+	},
+	warning_diagnostic = {
+		fg = colors.red,
+		bg = colors.black,
+		-- sp = "<colour-value-here>",
+	},
+	error_visible = {
+		fg = colors.red,
+		bg = colors.black,
+	},
+	error_diagnostic_visible = {
+		fg = colors.red,
+		bg = colors.black,
+	},
+	duplicate_visible = {
+		fg = colors.light_grey,
+		bg = colors.black,
+		italic = false,
+	},
+	duplicate = {
+		fg = colors.light_grey,
+		bg = colors.black,
+		italic = false,
+	},
+	pick_visible = {
+		fg = colors.light_grey,
+		bg = colors.black,
+		bold = true,
+		italic = false,
+	},
+	pick = {
+		fg = colors.light_grey,
+		bg = colors.black,
+		bold = true,
+		italic = false,
+	},
+	offset_separator = {
+		fg = colors.light_grey,
+		bg = colors.black,
+	},
+	background = {
+		fg = colors.light_grey,
+		bg = colors.black,
+	},
+	-- Buffers
+	buffer_visible = {
+		fg = colors.light_grey,
+		bg = colors.black,
+		italics = false,
+	},
 	-- For diagnostics = "nvim_lsp"
 	error = {
 		fg = colors.light_grey,
-		bg = colors.black2,
+		bg = colors.black,
 	},
 	error_diagnostic = {
 		fg = colors.light_grey,
-		bg = colors.black2,
+		bg = colors.black,
 	},
-
 	-- Close buttons
 	close_button = {
 		fg = colors.light_grey,
@@ -34,59 +226,28 @@ local highlights = {
 	},
 	close_button_visible = {
 		fg = colors.light_grey,
-		bg = colors.black2,
-	},
-	close_button_selected = {
-		fg = colors.red,
 		bg = colors.black,
 	},
 	fill = {
 		fg = colors.grey_fg,
-		bg = colors.black2,
-	},
-	indicator_selected = {
-		fg = colors.black,
 		bg = colors.black,
 	},
-
 	-- Modified
 	modified = {
 		fg = colors.red,
-		bg = colors.black2,
+		bg = colors.black,
 	},
 	modified_visible = {
 		fg = colors.red,
-		bg = colors.black2,
-	},
-	modified_selected = {
-		fg = colors.green,
 		bg = colors.black,
 	},
-
 	-- Separators
 	separator = {
-		fg = colors.black2,
-		bg = colors.black2,
+		fg = colors.black,
+		bg = colors.black,
 	},
 	separator_visible = {
-		fg = colors.black2,
-		bg = colors.black2,
-	},
-	separator_selected = {
-		fg = colors.black2,
-		bg = colors.black3,
-	},
-	-- Tabs
-	tab = {
-		fg = colors.light_grey,
-		bg = colors.one_bg3,
-	},
-	tab_selected = {
-		fg = colors.black2,
-		bg = colors.nord_blue,
-	},
-	tab_close = {
-		fg = colors.red,
+		fg = colors.black,
 		bg = colors.black,
 	},
 }
@@ -170,7 +331,7 @@ local opts = {
 		enforce_regular_tabs = false,
 		always_show_bufferline = false,
 		hover = {
-			enabled = false, -- requires nvim 0.8+
+			enabled = true, -- requires nvim 0.8+
 			delay = 200,
 			reveal = { "close" },
 		},
