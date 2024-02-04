@@ -20,6 +20,8 @@ lvim.builtin.alpha = {
 -- Bufferline
 -- =========================================
 reload("user.bufferline")
+
+-- lvim.lsp.null_ls.config
 -- Telescope
 -- =========================================
 -- lvim.builtin.telescope.defaults.path_display = { "smart", "absolute", "truncate" }
@@ -67,7 +69,7 @@ lvim.builtin.telescope.defaultslayout_config = {
 }
 local user_telescope = require("user.telescope")
 lvim.builtin.telescope.defaults.layout_config = user_telescope.layout_config()
-local actions = require("telescope.actions")
+-- local actions = require("telescope.actions")
 
 local telescope_actions = require("telescope.actions.set")
 lvim.builtin.telescope.pickers.git_files = {
@@ -82,6 +84,7 @@ lvim.builtin.telescope.pickers.live_grep = {
 lvim.builtin.telescope.pickers.find_files = {
 	layout_strategy = "horizontal",
 	attach_mappings = function(_)
+		---@diagnostic disable-next-line: undefined-field
 		telescope_actions.select:enhance({
 			post = function()
 				vim.cmd(":normal! zx")

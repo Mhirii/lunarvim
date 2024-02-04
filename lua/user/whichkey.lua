@@ -39,16 +39,24 @@ lvim.builtin.which_key.mappings["b"] = {
 	L = { "<cmd>BufferLineCloseRight<cr>", icons.ui.Close .. " Close all to the Right" },
 	l = { "<cmd>BufferLineMoveNext<CR>", icons.ui.Move .. " Move Buffer to Left" },
 	n = { "<cmd>BufferLineCycleNext<cr>", icons.ui.BoldArrowRight .. " Next Buffer" },
+	o = { "<cmd>BufferLineCloseLeft<cr><cmd>BufferLineCloseRight<cr>", icons.ui.Close .. "Close other buffers" },
 }
 
 lvim.builtin.which_key.mappings["c"] = {
 	name = "Code",
 	a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", icons.ui.Lightbulb .. " Code Action" },
 	d = { "<cmd>Telescope diagnostics bufnr=0 theme=get_ivy<cr>", "󱂩 Buffer Diagnostics" },
+	e = { "<cmd>Telescope quickfix<cr>", icons.ui.LightbulbAutofix .. " Telescope Quickfix" },
 	f = { ":lua require('conform').format()<cr>", "󰉢 Format" },
 	i = { "<cmd>Telescope import<cr>", icons.misc.Package .. " Import" },
 	n = { "<cmd>AerialNavToggle<cr>", icons.ui.Layout .. " Aerial Float" },
+	r = { "<cmd>lua vim.lsp.buf.rename()<cr>", icons.ui.Pencil .. " Rename" },
+	-- s = { "<cmd>Telescope lsp_document_symbols<cr>", icons.kind.Class .. " Document Symbols" },
 	s = { "<cmd>AerialToggle<cr>", icons.ui.SplitHorizontal .. " Aerial Sidebar" },
+	S = {
+		"<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
+		icons.kind.Folder .. " Workspace Symbols",
+	},
 	w = { "<cmd>Telescope diagnostics<cr>", "󱂬 Diagnostics" },
 }
 lvim.builtin.which_key.vmappings["c"] = {
